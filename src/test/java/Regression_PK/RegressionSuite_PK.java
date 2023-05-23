@@ -23,8 +23,7 @@ public class RegressionSuite_PK {
  */
 
     @BeforeTest
-    public void DU_Setup() throws InterruptedException
-    {
+    public void DU_Setup() throws InterruptedException, IOException {
         DU_Wait.driver = DB.driver();
     }
 
@@ -82,7 +81,6 @@ public class RegressionSuite_PK {
         DU_Login DL = new DU_Login(driver);
         DL.Login2(driver);
     }
-
 
     @Test (priority = 3)
     @Description ("Verifying Scrolling from Footer to Header")
@@ -243,8 +241,6 @@ public class RegressionSuite_PK {
         DU_EventCalendar DEC = new DU_EventCalendar(driver);
         DEC.Event_Calendar(driver);
     }
-
-
 
     @Test (priority = 23)
     @Description ("Verifying the Growth Assistant Module in the Navigation Bar")

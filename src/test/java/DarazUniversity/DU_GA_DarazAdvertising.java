@@ -40,6 +40,7 @@ public class DU_GA_DarazAdvertising {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Growth Assistant\"]")));
         Actions action = new Actions(driver);
         action.moveToElement(GrowthAssistant).perform();
+        GrowthAssistant.click();
         Allure.step("Hovered on the Growth Assistant Tab on the Navigation bar");
 
         Thread.sleep(1500);
@@ -61,6 +62,9 @@ public class DU_GA_DarazAdvertising {
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Content Library\"]")));
         Thread.sleep(2000);
+
+        driver.switchTo().frame(0);
+
 
         if (driver.findElements(By.xpath("//*[@class=\"col-md-12 text-center\"]")).size()>0)
         {

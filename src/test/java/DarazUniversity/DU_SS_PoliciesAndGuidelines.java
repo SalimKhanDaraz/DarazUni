@@ -38,6 +38,7 @@ public class DU_SS_PoliciesAndGuidelines {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Seller Support\" and @class=\"recommend-trigger\"]")));
         Actions action = new Actions(driver);
         action.moveToElement(SellerSupport).perform();
+        SellerSupport.click();
         Allure.step("Hovered on the Seller Support Tab on the Navigation bar");
 
         Thread.sleep(1500);

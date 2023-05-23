@@ -23,7 +23,7 @@ public class DU_Portal {
 
     XSSFSheet sheet;
 
-    public static String Venture = "PK";
+    public static String Venture = "LK";
 
     public DU_Portal(WebDriver driver) {PageFactory.initElements(driver, this);}
 

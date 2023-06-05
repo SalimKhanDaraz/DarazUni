@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Base64;
 
+import static DarazUniversity.DU_Portal.Venture;
+
 public class DU_Login extends ExcelData  {
 
 
@@ -31,10 +33,10 @@ public class DU_Login extends ExcelData  {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath="//*[@class=\"step-close\"]")
+    @FindBy(xpath="//*[@class=\"wt-mask\"]")
     public WebElement Popupclose;
 
-    @FindBy(xpath="//*[@id=\"root\"]/div/div[1]/header/div/button[1]")
+    @FindBy(xpath="//*[@class=\"content page-body-pc\"]//*[text()=\"Login\"]")
     public WebElement LoginButton;
 
     @FindBy(xpath="//*[@placeholder=\"Please enter\" and @type=\"text\"]")
@@ -135,16 +137,52 @@ public class DU_Login extends ExcelData  {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
+        /*
         Thread.sleep(1500);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class=\"step-close\"]")));
+        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class=\"step-close\"]")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class=\"wt-mask\"]")));
         Popupclose.click();
         Allure.step("Closed the Popup Window on the Home Page");
 
+ */
+
+
+        switch (Venture) {
+            case "PK":
+
+                driver.get("https://sellercenter.daraz.pk/v2/seller/login?redirect_url=https%3A%2F%2Funiversity.daraz.pk%2FpersonalRecommend\n");
+
+                break;
+
+            case "LK":
+
+                driver.get("https://sellercenter.daraz.lk/v2/seller/login?redirect_url=https%3A%2F%2Funiversity.daraz.lk%2FpersonalRecommend");
+
+                break;
+
+            case "NP":
+
+                driver.get("https://sellercenter.daraz.com.np/v2/seller/login?redirect_url=https%3A%2F%2Funiversity.daraz.com.np%2FpersonalRecommend");
+
+                break;
+
+            case "BD":
+
+                driver.get("https://sellercenter.daraz.com.bd/v2/seller/login?redirect_url=https%3A%2F%2Funiversity.daraz.com.bd%2FpersonalRecommend");
+
+                break;
+        }
+
+
+
+/*
         Thread.sleep(1500);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[1]/header/div/button[1]")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class=\"content page-body-pc\"]//*[text()=\"Login\"]")));
         LoginButton.click();
         Allure.step("Clicked on Login button on the Home Page to redirect to the Login Page");
 
+
+ */
         Thread.sleep(1500);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@placeholder=\"Please enter\" and @type=\"text\"]")));
         UserID.sendKeys(decodedusername("c3RyZXNzdGVzdDI3MkBzZ2xpdmV0ZXN0LmNvbQ=="));

@@ -59,6 +59,8 @@ public class DU_FT_DarazBlog {
 
         Thread.sleep(8000);
 
+        try{
+
         if (driver.findElements(By.xpath("//*[@class=\"elementor-widget-container\"]")).size()>0)
         {
             System.out.println("*******************************************************");
@@ -78,12 +80,19 @@ public class DU_FT_DarazBlog {
             System.out.println("**********************************");
             System.out.println("");
             Allure.step("Daraz Blog module Failed");
+            }
+        }
+        catch (Exception e)
+        {
+            driver.close();
+            driver.switchTo().window(currentHandle);
         }
 
-        driver.close();
+
+       // driver.close();
         softAssert.assertAll();
 
-      //  driver.switchTo().window(tabs.get(0));
-        driver.switchTo().window(currentHandle);
+        driver.close();
+       driver.switchTo().window(currentHandle);
     }
 }

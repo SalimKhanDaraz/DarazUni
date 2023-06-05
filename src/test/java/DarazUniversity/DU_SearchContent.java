@@ -1,12 +1,17 @@
 package DarazUniversity;
 
 import io.qameta.allure.Allure;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
+
+import java.time.Duration;
 
 public class DU_SearchContent {
 
@@ -23,15 +28,18 @@ public class DU_SearchContent {
     @FindBy(xpath="//*[@class=\"logo-wrap\" and @href=\"/personalRecommend\"]")
     public WebElement HomeButton;
 
-    @FindBy(xpath="//*[text()=\"How to Fulfill an Order?\"]")
+    @FindBy(xpath="//*[text()=\"Importance of Fragile Sticker\"]")
     public WebElement SearchContentResult;
+
 
     public void Search (WebDriver driver) throws InterruptedException {
 
         SoftAssert softAssert = new SoftAssert();
 
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
         Thread.sleep(2000);
-        SearchField.sendKeys("How to Fulfill an Order?");
+        SearchField.sendKeys("Importance of Fragile Sticker");
         Allure.step("Entered Data in the Search Field");
 
         Thread.sleep(1000);
@@ -39,6 +47,7 @@ public class DU_SearchContent {
         Allure.step("Clicked on the Searched Button");
 
         Thread.sleep(1500);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Importance of Fragile Sticker\"]")));
         boolean SearchResult;
 
         try{

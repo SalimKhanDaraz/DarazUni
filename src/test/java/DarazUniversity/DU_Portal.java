@@ -18,12 +18,13 @@ import java.util.Map;
 
 
 public class DU_Portal {
+
     String excelpath;
     XSSFWorkbook workbook;
 
     XSSFSheet sheet;
 
-    public static String Venture = "LK";
+    public static String Venture = "NP";
 
     public DU_Portal(WebDriver driver) {PageFactory.initElements(driver, this);}
 

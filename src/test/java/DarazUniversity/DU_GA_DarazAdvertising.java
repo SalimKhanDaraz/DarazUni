@@ -60,8 +60,8 @@ public class DU_GA_DarazAdvertising {
             }
         }
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Content Library\"]")));
-        Thread.sleep(2000);
+        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Content Library\"]")));
+        Thread.sleep(10000);
 
         driver.switchTo().frame(0);
 

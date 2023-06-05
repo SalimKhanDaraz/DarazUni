@@ -33,17 +33,23 @@ public class DU_CatListingProducts {
     @FindBy(xpath="//*[text()=\"Introducing Product Advisor\"]")
     public WebElement IntroducingProductAdvisor_PK;
 
-    @FindBy(xpath="//*[text()=\"Product Listing Guide \"]")
+    @FindBy(xpath="//*[text()=\"All About Daraz Size Chart Feature \"]")
     public WebElement IntroducingProductAdvisor_LK;
 
-    @FindBy(xpath="//*[text()=\"Electronics Category Insights\"]")
+    @FindBy(xpath="//*[text()=\"Price & Stock update (Single Product)\"]")
     public WebElement IntroducingProductAdvisor_NP;
 
-    @FindBy(xpath="//*[text()=\"Product Listing Guide\"]")
+    @FindBy(xpath="//*[text()=\"All About Daraz Size Chart Feature \"]")
     public WebElement IntroducingProductAdvisor_BD;
 
     @FindBy(xpath="//*[text()=\"Reference Material\"]")
     public WebElement TutorailMaterial;
+
+    @FindBy(xpath="//*[@placeholder=\"Content type\"]")
+    public WebElement ContentType_Filter;
+
+    @FindBy(xpath="//*[text()=\"Tutorials\"]")
+    public WebElement Filter_Selection;
 
     public void ListingProducts(WebDriver driver) throws InterruptedException {
 
@@ -90,8 +96,22 @@ public class DU_CatListingProducts {
 
             case "LK":
 
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
+                ContentType_Filter.click();
+
+                Thread.sleep(1000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
+                Filter_Selection.click();
+
+                Thread.sleep(2000);
+                driver.findElement(By.xpath("//*[@placeholder=\"Sort By\"]")).click();
+
+                Thread.sleep(2000);
+                driver.findElement(By.xpath("//*[text()=\"Alphabetical Order\"]")).click();
+
                 Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Product Listing Guide \"]")));
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"All About Daraz Size Chart Feature \"]")));
                 IntroducingProductAdvisor_LK.click();
                 Allure.step("Clicked on Product Listing Guide tutorial");
 
@@ -100,7 +120,7 @@ public class DU_CatListingProducts {
             case "NP":
 
                 Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Electronics Category Insights\"]")));
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Price & Stock update (Single Product)\"]")));
                 IntroducingProductAdvisor_NP.click();
                 Allure.step("Clicked on Product Listing Guide tutorial");
 
@@ -108,12 +128,26 @@ public class DU_CatListingProducts {
 
             case "BD":
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Product Listing Guide\"]")));
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
+                ContentType_Filter.click();
+
+                Thread.sleep(1000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
+                Filter_Selection.click();
+
+                Thread.sleep(2000);
+                driver.findElement(By.xpath("//*[@placeholder=\"Sort By\"]")).click();
+
+                Thread.sleep(2000);
+                driver.findElement(By.xpath("//*[text()=\"Alphabetical Order\"]")).click();
+
+                Thread.sleep(2000);
                 IntroducingProductAdvisor_BD.click();
                 Allure.step("Clicked on Product Listing Guide tutorial");
 
                 break;
+
         }
 
         Thread.sleep(1500);

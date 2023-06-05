@@ -33,7 +33,7 @@ public class DU_VerifyPlayButton {
     @FindBy(xpath="//*[text()=\"Packaging Guidelines\"]")
     public WebElement PackagGuidTutorial_BD;
 
-    @FindBy(xpath="//*[text()=\"Packaging Guidelines\"]")
+    @FindBy(xpath="//*[text()=\"Fulfill your Orders on Seller Center\"]")
     public WebElement PackagGuidTutorial_LK;
 
     @FindBy(xpath="//*[text()=\"Packaging Guidelines 2.0 \"]")
@@ -41,6 +41,12 @@ public class DU_VerifyPlayButton {
 
     @FindBy(xpath = "//a[1][@class=\"image-card\"]")
     public WebElement PlayButton;
+
+    @FindBy(xpath="//*[@placeholder=\"Content type\"]")
+    public WebElement ContentType_Filter;
+
+    @FindBy(xpath="//*[text()=\"Tutorials\"]")
+    public WebElement Filter_Selection;
 
     public void OrderFulfill (WebDriver driver) throws InterruptedException {
 
@@ -86,11 +92,40 @@ public class DU_VerifyPlayButton {
                 break;
 
             case "LK":
+/*
+                Thread.sleep(2000);
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
+                ContentType_Filter.click();
+
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
+                Filter_Selection.click();
+
+                Thread.sleep(2000);
+                driver.findElement(By.xpath("//*[@placeholder=\"Sort By\"]")).click();
+
+                Thread.sleep(2000);
+                driver.findElement(By.xpath("//*[text()=\"Alphabetical Order\"]")).click();
 
                 Thread.sleep(4000);
-                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Packaging Guidelines\"]")));
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Fulfill your Orders on Seller Center\"]")));
                 PackagGuidTutorial_LK.click();
                 Allure.step("Clicked on Order Report course");
+
+ */
+
+                Thread.sleep(2000);
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
+                ContentType_Filter.click();
+
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
+                Filter_Selection.click();
+
+                Thread.sleep(2000);
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Packaging Guidelines\"]")));
+                PackagGuidTutorial_LK.click();
+                Allure.step("Clicked on Packaging Guidelines course");
+
+
 
                 break;
 

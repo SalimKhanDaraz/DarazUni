@@ -41,10 +41,10 @@ public class DU_CatMaximisingSales {
     @FindBy(xpath="//*[text()='Why is Customer Service Important?']")
     public WebElement Tutorial_PK;
 
-    @FindBy(xpath="//*[text()=\"Guide to creating Collectible Vouchers\"]")
+    @FindBy(xpath="//*[text()=\"10 Ways to Boost your Sales\"]")
     public WebElement Tutorial_LK;
 
-    @FindBy(xpath="//*[text()=\"Boost your Products using Seller Picks \"]")
+    @FindBy(xpath="//*[text()=\"10 Ways to Boost your Sales\"]")
     public WebElement Tutorial_BD;
 
     @FindBy(xpath="//*[text()=\"Boost your Products using Seller Picks \"]")
@@ -53,6 +53,11 @@ public class DU_CatMaximisingSales {
     @FindBy(xpath="//*[text()=\"Reference Material\"]")
     public WebElement TutorialMaterial1;
 
+    @FindBy(xpath="//*[@placeholder=\"Content type\"]")
+    public WebElement ContentType_Filter;
+
+    @FindBy(xpath="//*[text()=\"Tutorials\"]")
+    public WebElement Filter_Selection;
 
     public void MaximisingSales(WebDriver driver) throws InterruptedException {
 
@@ -106,17 +111,47 @@ public class DU_CatMaximisingSales {
 
             case "BD":
 
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
+                ContentType_Filter.click();
+
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
+                Filter_Selection.click();
+
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Sort By\"]")));
+                driver.findElement(By.xpath("//*[@placeholder=\"Sort By\"]")).click();
+
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Alphabetical Order\"]")));
+                driver.findElement(By.xpath("//*[text()=\"Alphabetical Order\"]")).click();
+
                 Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Boost your Products using Seller Picks \"]")));
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"10 Ways to Boost your Sales\"]")));
                 Tutorial_BD.click();
-                Allure.step("Clicked on Guide to Creating Collectible Vouchers tutorial");
+                Allure.step("Clicked on All About DarazMall tutorial");
 
                 break;
 
             case "LK":
 
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
+                ContentType_Filter.click();
+
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
+                Filter_Selection.click();
+
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Sort By\"]")));
+                driver.findElement(By.xpath("//*[@placeholder=\"Sort By\"]")).click();
+
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Alphabetical Order\"]")));
+                driver.findElement(By.xpath("//*[text()=\"Alphabetical Order\"]")).click();
+
                 Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("Guide to creating Collectible Vouchers\"]")));
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"10 Ways to Boost your Sales\"]")));
                 Tutorial_LK.click();
                 Allure.step("Clicked on Guide to Creating Collectible Vouchers tutorial");
 

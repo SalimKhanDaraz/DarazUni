@@ -37,11 +37,17 @@ public class DU_CatPoliciesAndGuidlines {
     @FindBy(xpath="//*[text()=\"Seller Claims Policy\"]")
     public WebElement SellerClaimsPolicy_LK;
 
-    @FindBy(xpath="//*[text()=\"Seller Scorecard Policy\"]")
+    @FindBy(xpath="//*[text()=\"Marketplace Commission Structure\"]")
     public WebElement SellerClaimsPolicy_BD;
 
     @FindBy(xpath="//*[text()=\"Reference Material\"]")
     public WebElement TutorailMaterial;
+
+    @FindBy(xpath="//*[@placeholder=\"Content type\"]")
+    public WebElement ContentType_Filter;
+
+    @FindBy(xpath="//*[text()=\"Tutorials\"]")
+    public WebElement Filter_Selection;
 
     public void PoliciesAndGuideline (WebDriver driver) throws InterruptedException {
 
@@ -85,8 +91,15 @@ public class DU_CatPoliciesAndGuidlines {
 
             case "BD":
 
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Seller Scorecard Policy\"]")));
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Search by Tag\"]")));
+                ContentType_Filter.click();
+
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
+                Filter_Selection.click();
+
                 Thread.sleep(1500);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Marketplace Commission Structure\"]")));
                 SellerClaimsPolicy_BD.click();
                 Allure.step("Clicked on the Seller Claims Policy course");
 

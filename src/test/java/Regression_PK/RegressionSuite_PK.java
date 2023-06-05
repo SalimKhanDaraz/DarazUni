@@ -82,6 +82,7 @@ public class RegressionSuite_PK {
         DL.Login2(driver);
     }
 
+
     @Test (priority = 3)
     @Description ("Verifying Scrolling from Footer to Header")
     public void DU_HPScroll () throws InterruptedException
@@ -162,6 +163,8 @@ public class RegressionSuite_PK {
         DUCOF.OrderFulfill(driver);
     }
 
+
+
     @Test (priority = 13)
     @Description ("Verifying the Getting Started Category under the Categories Module")
     public void DU_CatGettingStarted() throws InterruptedException
@@ -209,6 +212,8 @@ public class RegressionSuite_PK {
         DU_CatPoliciesAndGuidlines DCPG = new DU_CatPoliciesAndGuidlines(driver);
         DCPG.PoliciesAndGuideline(driver);
     }
+
+
 
     @Test (priority = 19)
     @Description ("Verifying the View All Courses Option under the Categories Module")

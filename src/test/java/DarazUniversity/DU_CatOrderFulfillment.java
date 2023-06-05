@@ -37,18 +37,23 @@ public class DU_CatOrderFulfillment extends DU_Wait {
     @FindBy(xpath="//a[contains(text(),'Order Report')]")
     public WebElement PackagGuidTutorial_PK;
 
-    @FindBy(xpath="//a[text()=\"Packaging Guidelines\" and @data-spm=\"1\"]")
+    @FindBy(xpath="//*[text()=\"Packaging Guidelines\"]")
     public WebElement PackagGuidTutorial_LK;
 
     @FindBy(xpath="//*[text()=\"Packaging Guidelines 2.0 \"]")
     public WebElement PackagGuidTutorial_NP;
 
-    @FindBy(xpath="//*[text()=\"Guide to download an Order Report\"]")
+    @FindBy(xpath="//a[contains(text(),'Order Daraz Packaging')]")
     public WebElement OrderReportTutorial_BD;
 
     @FindBy(xpath="//*[text()=\"Reference Material\"]")
     public WebElement TutorailMaterial;
 
+    @FindBy(xpath="//*[@placeholder=\"Content type\"]")
+    public WebElement ContentType_Filter;
+
+    @FindBy(xpath="//*[text()=\"Tutorials\"]")
+    public WebElement Filter_Selection;
 
     public void OrderFulfill (WebDriver driver) throws InterruptedException {
 
@@ -86,7 +91,7 @@ public class DU_CatOrderFulfillment extends DU_Wait {
         {
             case "PK":
 
-                Thread.sleep(4000);
+                Thread.sleep(2000);
                 waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Order Report')]")));
                 PackagGuidTutorial_PK.click();
                 Allure.step("Clicked on Order Report course");
@@ -95,8 +100,15 @@ public class DU_CatOrderFulfillment extends DU_Wait {
 
             case "LK":
 
-                Thread.sleep(4000);
-                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()=\"Packaging Guidelines\" and @data-spm=\"1\"]")));
+                Thread.sleep(2000);
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
+                ContentType_Filter.click();
+
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
+                Filter_Selection.click();
+
+                Thread.sleep(2000);
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Packaging Guidelines\"]")));
                 PackagGuidTutorial_LK.click();
                 Allure.step("Clicked on Packaging Guidelines course");
 
@@ -104,7 +116,7 @@ public class DU_CatOrderFulfillment extends DU_Wait {
 
             case "NP":
 
-                Thread.sleep(4000);
+                Thread.sleep(2000);
                 waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Packaging Guidelines 2.0 \"]")));
                 PackagGuidTutorial_NP.click();
                 Allure.step("Clicked on Packaging Guidelines course");
@@ -113,8 +125,14 @@ public class DU_CatOrderFulfillment extends DU_Wait {
 
             case "BD":
 
-                Thread.sleep(4000);
-                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Guide to download an Order Report\"]")));
+                Thread.sleep(2000);
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
+                ContentType_Filter.click();
+
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
+                Filter_Selection.click();
+
+                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Order Daraz Packaging')]")));
                 OrderReportTutorial_BD.click();
                 Allure.step("Clicked on Order Report course");
 

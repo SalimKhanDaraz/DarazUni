@@ -57,6 +57,7 @@ public class DU_FT_TermsAndConditions {
 
         try
         {
+            Thread.sleep(2000);
             All_Content = Content.isDisplayed();
         }
         catch (Exception e)
@@ -64,9 +65,9 @@ public class DU_FT_TermsAndConditions {
             All_Content = false;
         }
 
-        Thread.sleep(5000);
+        Thread.sleep(2000);
 
-        if (All_Content == true)
+        if (All_Content)
         {
             System.out.println("*******************************************************");
             System.out.println("Check 1: Data in Terms & Conditions module is Available");

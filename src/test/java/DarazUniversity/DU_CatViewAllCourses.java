@@ -30,10 +30,10 @@ public class DU_CatViewAllCourses {
     @FindBy(xpath="//*[text()=\"List of Prohibited Items\"]")
     public WebElement AllAboutFreeShipping_PK;
 
-    @FindBy(xpath="//*[text()=\"Guide to download an Order Report\"]")
+    @FindBy(xpath="//*[text()=\"Daraz Content Guidelines\"]")
     public WebElement CategoryRestrictionPolicy_LK;
 
-    @FindBy(xpath="//*[text()=\"Media Center Guide\"]")
+    @FindBy(xpath="//*[text()=\"About Daraz University\"]")
     public WebElement CategoryRestrictionPolicy_BD;
 
     @FindBy(xpath="//*[text()=\"Reference Material\"]")
@@ -45,8 +45,17 @@ public class DU_CatViewAllCourses {
     @FindBy(xpath="//*[@class=\"next-menu-item-inner\"]//*[text()='Policy']")
     public WebElement Tag_Value;
 
-    @FindBy(xpath="//div[@id='pagination']")
+    @FindBy(xpath="//*[text()=\"Sales\" and @class=\"next-menu-item-text\"]")
+    public WebElement Tag_Sales;
+
+    @FindBy(xpath="//div[@class='page-body content']")
     public WebElement Focus_Shift;
+
+    @FindBy(xpath="//*[@placeholder=\"Content type\"]")
+    public WebElement ContentType_Filter;
+
+    @FindBy(xpath="//*[text()=\"Tutorials\"]")
+    public WebElement Filter_Selection;
 
     public void ViewAllCourses(WebDriver driver) throws InterruptedException {
 
@@ -92,8 +101,17 @@ public class DU_CatViewAllCourses {
 
             case "LK":
 
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Guide to download an Order Report\"]")));
+                Thread.sleep(2000);
+                Tag_Filter.click();
+
                 Thread.sleep(1500);
+                Tag_Sales.click();
+
+                Thread.sleep(1000);
+                Focus_Shift.click();
+
+                Thread.sleep(1500);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Daraz Content Guidelines\"]")));
                 CategoryRestrictionPolicy_LK.click();
                 Allure.step("Clicked on Guide to download an Order Report");
 
@@ -101,8 +119,22 @@ public class DU_CatViewAllCourses {
 
             case "BD":
 
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Media Center Guide\"]")));
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
+                ContentType_Filter.click();
+
+                Thread.sleep(1000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
+                Filter_Selection.click();
+
+                Thread.sleep(2000);
+                driver.findElement(By.xpath("//*[@placeholder=\"Sort By\"]")).click();
+
+                Thread.sleep(2000);
+                driver.findElement(By.xpath("//*[text()=\"Alphabetical Order\"]")).click();
+
                 Thread.sleep(1500);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"About Daraz University\"]")));
                 CategoryRestrictionPolicy_BD.click();
                 Allure.step("Clicked on Guide to download an Order Report");
 

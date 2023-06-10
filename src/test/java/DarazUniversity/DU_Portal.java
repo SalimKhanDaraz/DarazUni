@@ -26,7 +26,7 @@ public class DU_Portal {
 
     //public static String Venture = "NP";
 
-    static String Venture = System.getenv("Venture_Jenkins");
+    public static String Venture = System.getenv("Venture_Jenkins");
 
     public DU_Portal(WebDriver driver) {PageFactory.initElements(driver, this);}
 

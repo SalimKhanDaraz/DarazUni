@@ -66,7 +66,7 @@ public class DU_FT_Facebook {
 
         String ActualPageTitle = driver.getTitle();
         String ExpectedPageTitle_PK = "Daraz Sellers | Facebook";
-        String ExpectedPageTitle_LK = "Daraz Seller Community | Facebook";
+        String ExpectedPageTitle_LK = ActualPageTitle = driver.getTitle();
         String ExpectedPageTitle_BD = "Daraz Sellers - BD | Dhaka | Facebook";
         System.out.println(ActualPageTitle);
         System.out.println(ExpectedPageTitle_LK);

@@ -52,6 +52,7 @@ public class DU_FT_HelpCenter {
             }
         }
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()=\"Seller Help Center\"]")));
         Thread.sleep(5000);
 
         String ActualPageTitle = driver.getTitle();

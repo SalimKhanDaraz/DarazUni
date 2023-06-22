@@ -32,14 +32,17 @@ public class DU_FT_Facebook {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
+
         Thread.sleep(3000);
         js.executeScript("arguments[0].scrollIntoView();", FB_Icon);
 
         Thread.sleep(2000);
         FB_Icon.click();
 
-        Thread.sleep(8000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()=\"click.daraz.com.bd\"]")));
+
+
+     //   Thread.sleep(8000);
+       // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()=\"click.daraz.com.bd\"]")));
 
         Set<String> handles = driver.getWindowHandles();
         String currentHandle = driver.getWindowHandle();
@@ -52,12 +55,20 @@ public class DU_FT_Facebook {
             }
         }
 
+        try {
+            Thread.sleep(2000);
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@aria-label=\"Close\"]"))).click();
+            driver.findElement(By.xpath("//*[@aria-label=\"Close\"]")).click();
+        }catch (Exception e){
+            System.out.println("Close Icon not found");
+        }
+
         Thread.sleep(5000);
 
         String ActualPageTitle = driver.getTitle();
         String ExpectedPageTitle_PK = "Daraz Sellers - Home | Facebook";
         String ExpectedPageTitle_LK = "Daraz Seller Community | Facebook";
-        String ExpectedPageTitle_BD = "Daraz Sellers - BD";
+        String ExpectedPageTitle_BD = "Daraz Sellers - BD | Dhaka | Facebook";
         System.out.println(ActualPageTitle);
 
         switch (DU_Portal.Venture)

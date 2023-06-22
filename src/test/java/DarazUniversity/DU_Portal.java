@@ -29,9 +29,9 @@ public class DU_Portal {
     XSSFSheet sheet;
     
 
-    public static String Venture = "BD";
+    //public static String Venture = "BD";
 
-    //public static String Venture = System.getenv("Venture_Jenkins");
+    public static String Venture = System.getenv("Venture_Jenkins");
 
     public DU_Portal(WebDriver driver) {PageFactory.initElements(driver, this);}
 

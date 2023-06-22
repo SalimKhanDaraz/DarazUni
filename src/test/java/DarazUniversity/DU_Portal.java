@@ -29,9 +29,9 @@ public class DU_Portal {
     XSSFSheet sheet;
     
 
-    //public static String Venture = "BD";
+    public static String Venture = "NP";
 
-    public static String Venture = System.getenv("Venture_Jenkins");
+    //public static String Venture = System.getenv("Venture_Jenkins");
 
     public DU_Portal(WebDriver driver) {PageFactory.initElements(driver, this);}
 
@@ -81,7 +81,7 @@ public class DU_Portal {
             case "LK":
 
                 driver.get("https://university.daraz.lk/");
-                Allure.step("Launched Daraz University LK Portal");
+                System.out.println("Launched Daraz University LK Portal");
                 Allure.step("Launched Daraz University LK Portal");
 
 
@@ -90,7 +90,7 @@ public class DU_Portal {
             case "NP":
 
                 driver.get("https://university.daraz.com.np/");
-                Allure.step("Launched Daraz University NP Portal");
+                System.out.println("Launched Daraz University NP Portal");
                 Allure.step("Launched Daraz University NP Portal");
 
 
@@ -99,7 +99,7 @@ public class DU_Portal {
             case "BD":
 
                 driver.get("https://university.daraz.com.bd/");
-                Allure.step("Launched Daraz University BD Portal");
+                System.out.println("Launched Daraz University BD Portal");
                 Allure.step("Launched Daraz University BD Portal");
 
 

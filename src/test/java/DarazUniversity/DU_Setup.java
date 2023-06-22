@@ -30,7 +30,7 @@ public class DU_Setup {
             WebDriverManager.chromedriver().setup();
             ChromeDriverService service = ChromeDriverService.createDefaultService();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless","--remote-allow-origins=*");
+          //  options.addArguments("--headless","--remote-allow-origins=*");
             driver = new ChromeDriver(service, options);
         }
         else {

@@ -57,7 +57,7 @@ public class DU_FT_TermsAndConditions {
 
         try
         {
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             All_Content = Content.isDisplayed();
         }
         catch (Exception e)

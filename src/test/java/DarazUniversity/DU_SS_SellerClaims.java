@@ -52,7 +52,7 @@ public class DU_SS_SellerClaims {
     @FindBy(xpath="//li[text()=\"Others\"]")
     public WebElement DropdownData;
 
-    @FindBy(xpath="//input[@class='ant-calendar-picker-input ant-input']")
+    @FindBy(xpath="//*[@data-icon='calendar']")
     public WebElement Dropdown4;
 
     @FindBy(xpath="//*[@class=\"ant-calendar-today-btn \"]")
@@ -152,13 +152,13 @@ public class DU_SS_SellerClaims {
             Dropdown3.click();
             Allure.step("Clicked on the Inbound Order Number dropdown");
 
-            //Thread.sleep(1500);
-            //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()=\"Others\"]")));
-            //DropdownData.click();
-            //Allure.step("Selected the Inbound Order Number from the Order Numbers list");
+            Thread.sleep(1500);
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()=\"Others\"]")));
+            DropdownData.click();
+            Allure.step("Selected the Inbound Order Number from the Order Numbers list");
 
             Thread.sleep(1500);
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@class='ant-calendar-picker-input ant-input']")));
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@data-icon='calendar']")));
             Dropdown4.click();
             Allure.step("Clicked on the Calender to Select the Time slot");
 

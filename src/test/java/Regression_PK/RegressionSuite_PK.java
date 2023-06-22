@@ -81,7 +81,6 @@ public class RegressionSuite_PK {
         DU_Login DL = new DU_Login(driver);
         DL.Login2(driver);
     }
-/*
 
     @Test (priority = 3)
     @Description ("Verifying Scrolling from Footer to Header")
@@ -428,9 +427,6 @@ public class RegressionSuite_PK {
     }
 
 
- */
-
-
     @Test (priority = 32)
     @Description ("Verifying Terms & Conditions Module")
     public void DU_FT_TermsAndConditions() throws InterruptedException
@@ -495,13 +491,15 @@ public class RegressionSuite_PK {
     }
 
 
-
+/*    // not in use
     @Test (priority = 40,enabled = false)
     public void DU_OrderFulfillment() throws InterruptedException
     {
         DU_OrderFulfillment DUOF = new DU_OrderFulfillment(driver);
         DUOF.OrderFulfill(driver);
     }
+
+ */
 
     @Test (priority = 41)
     @Description ("Verifying the logout functionality")

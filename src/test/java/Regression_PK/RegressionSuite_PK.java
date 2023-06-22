@@ -74,7 +74,7 @@ public class RegressionSuite_PK {
     }
      */
 
-    @Test (priority = 2)
+    @Test (priority = 2,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Login Functionality")
     public void DU_Login () throws InterruptedException, IOException
     {
@@ -82,7 +82,7 @@ public class RegressionSuite_PK {
         DL.Login2(driver);
     }
 
-    @Test (priority = 3)
+    @Test (priority = 3,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Scrolling from Footer to Header")
     public void DU_HPScroll () throws InterruptedException
     {
@@ -90,7 +90,7 @@ public class RegressionSuite_PK {
         DSHP.ScrolltoContLib(driver);
     }
 
-    @Test (priority = 4)
+    @Test (priority = 4,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Search Functionality")
     public void DU_SearchContent () throws InterruptedException
     {
@@ -98,7 +98,7 @@ public class RegressionSuite_PK {
         DUSC.Search(driver);
     }
 
-    @Test (priority = 5)
+    @Test (priority = 5,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the content of Get Started Section on Home Page")
     public void DU_GetStartedSection () throws InterruptedException
     {
@@ -106,7 +106,7 @@ public class RegressionSuite_PK {
         DUGSS.GetStartSec();
     }
 
-    @Test (priority = 6)
+    @Test (priority = 6,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Scrolling to Operational Performance & Standards Section on Home Page")
     public void DU_ScrollOSSSection() throws InterruptedException
     {
@@ -114,7 +114,7 @@ public class RegressionSuite_PK {
         DUOSS.ScrolltoOSS(driver);
     }
 
-    @Test (priority = 7)
+    @Test (priority = 7,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Content of Operational Performance & Standards Section on Home Page")
     public void DU_OperationalStandardSection () throws InterruptedException
     {
@@ -122,7 +122,7 @@ public class RegressionSuite_PK {
         DUOSS.OperationalStandardSec();
     }
 
-    @Test (priority = 8)
+    @Test (priority = 8,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Scrolling to Seller Tools Section on Home Page")
     public void DU_ScrolltoSellersTool () throws InterruptedException
     {
@@ -130,7 +130,7 @@ public class RegressionSuite_PK {
         DUSST.ScrolltoST(driver);
     }
 
-    @Test(priority = 9)
+    @Test(priority = 9,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the content of Seller Tools Section on Home Page")
     public void DU_SellerToolSection () throws InterruptedException
     {
@@ -138,7 +138,7 @@ public class RegressionSuite_PK {
         DUSTS.SellerToolsSec();
     }
 
-    @Test(priority = 10)
+    @Test(priority = 10,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the content of Policies & Guidelines Section on Home Page")
     public void DU_PoliciesAndGuidelines () throws InterruptedException
     {
@@ -146,7 +146,7 @@ public class RegressionSuite_PK {
         DUPAG.PoliciesAndGuidlinesSec(driver);
     }
 
-    @Test (priority = 11)
+    @Test (priority = 11,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the content of Need More Help Section on Home Page")
     public void DU_NeedMoreHelp () throws InterruptedException
     {
@@ -154,7 +154,7 @@ public class RegressionSuite_PK {
         DUNMH.NeedMoreHelpSection(driver);
     }
 
-    @Test (priority = 12)
+    @Test (priority = 12,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Order Fulfillment Category under the Categories Module")
     public void DU_CatOrderFulfillment() throws InterruptedException
     {
@@ -163,8 +163,7 @@ public class RegressionSuite_PK {
     }
 
 
-
-    @Test (priority = 13)
+    @Test (priority = 13,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Getting Started Category under the Categories Module")
     public void DU_CatGettingStarted() throws InterruptedException
     {
@@ -172,7 +171,7 @@ public class RegressionSuite_PK {
         DCGS.GettingStarted(driver);
     }
 
-    @Test (priority = 14)
+    @Test (priority = 14,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Listing Products Category under the Categories Module")
     public void DU_CatListingProducts() throws InterruptedException
     {
@@ -180,7 +179,7 @@ public class RegressionSuite_PK {
         DCLP.ListingProducts(driver);
     }
 
-    @Test (priority = 15)
+    @Test (priority = 15,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Maximising Sales Category under the Categories Module")
     public void DU_CatMaximisingSales () throws InterruptedException
     {
@@ -188,7 +187,7 @@ public class RegressionSuite_PK {
         DCMS.MaximisingSales(driver);
     }
 
-    @Test (priority = 16)
+    @Test (priority = 16,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Finance Category under the Categories Module")
     public void DU_CatFinance() throws InterruptedException
     {
@@ -196,7 +195,7 @@ public class RegressionSuite_PK {
         DCF.Finance(driver);
     }
 
-    @Test (priority = 17)
+    @Test (priority = 17,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Streamlining Opearations Category under the Categories Module")
     public void DU_CatStreamliningOps () throws InterruptedException
     {
@@ -204,7 +203,7 @@ public class RegressionSuite_PK {
         DCSL.StreamOps(driver);
     }
 
-    @Test (priority = 18)
+    @Test (priority = 18,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Policies & Guidelines Category under the Categories Module")
     public void DU_CatPoliciesAndGuidlines () throws InterruptedException
     {
@@ -213,8 +212,7 @@ public class RegressionSuite_PK {
     }
 
 
-
-    @Test (priority = 19)
+    @Test (priority = 19,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the View All Courses Option under the Categories Module")
     public void DU_CatViewAllCourses() throws InterruptedException
     {
@@ -222,7 +220,7 @@ public class RegressionSuite_PK {
         DCVAC.ViewAllCourses(driver);
     }
 
-    @Test (priority = 20)
+    @Test (priority = 20,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Recommended Courses Section in Content Library Module")
     public void DU_CatRecommendedCourses() throws InterruptedException
     {
@@ -230,7 +228,7 @@ public class RegressionSuite_PK {
         DCRC.RecommendedCourseSec(driver);
     }
 
-    @Test (priority = 21)
+    @Test (priority = 21,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Content Library Module in the Navigation Bar")
     public void DU_ContentLibrary() throws InterruptedException
     {
@@ -238,7 +236,7 @@ public class RegressionSuite_PK {
         DCL.ContentLib(driver);
     }
 
-    @Test (priority = 22)
+    @Test (priority = 22,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Content Library Module in the Navigation Bar")
     public void DU_EventCalendar () throws InterruptedException
     {
@@ -246,7 +244,7 @@ public class RegressionSuite_PK {
         DEC.Event_Calendar(driver);
     }
 
-    @Test (priority = 23)
+    @Test (priority = 23,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Growth Assistant Module in the Navigation Bar")
     public void DU_GrowthAssistant() throws InterruptedException
     {
@@ -254,7 +252,7 @@ public class RegressionSuite_PK {
         DGA.GrowthAssistant(driver);
     }
 
-    @Test (priority = 25)
+    @Test (priority = 25,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Daraz Advertising Sub Module under the Growth Assistant Module")
     public void DU_DarazAdvertising() throws InterruptedException
     {
@@ -286,7 +284,7 @@ public class RegressionSuite_PK {
 
     }
 
-    @Test (priority = 24)
+    @Test (priority = 24,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Daraz Live Sub Module under the Growth Assistant Module")
     public void DU_DarazLive() throws InterruptedException
     {
@@ -317,7 +315,7 @@ public class RegressionSuite_PK {
 
 
 
-    @Test (priority = 26)
+    @Test (priority = 26,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Seller Support Module in the Navigation Bar")
     public void DU_SellerSupport() throws InterruptedException
     {
@@ -327,7 +325,7 @@ public class RegressionSuite_PK {
 
     }
 
-    @Test (priority = 27)
+    @Test (priority = 27,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Policies & Guidelines Sub Module under the Seller Support Module")
     public void DU_SS_PoliciesAndGuidline() throws InterruptedException
     {
@@ -335,7 +333,7 @@ public class RegressionSuite_PK {
         DSSPAG.DU_PoliciesAndGuideline(driver);
     }
 
-    @Test (priority = 28)
+    @Test (priority = 28,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Contact Us Sub Module under the Seller Support Module")
     public void DU_SS_ContactUS() throws InterruptedException
     {
@@ -344,8 +342,7 @@ public class RegressionSuite_PK {
     }
 
 
-
-    @Test (priority = 29)
+    @Test (priority = 29,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Seller Claims Module")
     public void DU_SS_SellerClaims() throws InterruptedException
     {
@@ -379,7 +376,7 @@ public class RegressionSuite_PK {
 
     }
 
-    @Test (priority = 30)
+    @Test (priority = 30,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying About Us Module")
     public  void DU_AboutUs () throws InterruptedException
     {
@@ -388,7 +385,7 @@ public class RegressionSuite_PK {
     }
 
 
-    @Test (priority = 31)
+    @Test (priority = 31,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Daraz Care Module")
     public  void DU_DarazCares () throws InterruptedException
     {
@@ -427,7 +424,7 @@ public class RegressionSuite_PK {
     }
 
 
-    @Test (priority = 32)
+    @Test (priority = 32,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Terms & Conditions Module")
     public void DU_FT_TermsAndConditions() throws InterruptedException
     {
@@ -435,7 +432,7 @@ public class RegressionSuite_PK {
         DFTTAC.TermsAndConditions(driver);
     }
 
-    @Test (priority = 33)
+    @Test (priority = 33,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Facebook Redirection from the footer")
     public void DU_FT_Facebook() throws InterruptedException
     {
@@ -443,7 +440,7 @@ public class RegressionSuite_PK {
         DFFB.FT_Facebook(driver);
     }
 
-    @Test (priority = 34)
+    @Test (priority = 34,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Facebook Redirection from the footer")
     public void DU_FT_Playstore() throws InterruptedException
     {
@@ -451,7 +448,7 @@ public class RegressionSuite_PK {
         DFTP.FT_Playstore(driver);
     }
 
-    @Test (priority = 35)
+    @Test (priority = 35,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Appstore Redirection from the footer")
     public void DU_FT_Appstore() throws InterruptedException
     {
@@ -459,7 +456,7 @@ public class RegressionSuite_PK {
         DFTA.FT_Appstore(driver);
     }
 
-    @Test (priority = 36)
+    @Test (priority = 36,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Appstore Redirection from the footer")
     public void DU_FT_HelpCenter() throws InterruptedException
     {
@@ -467,7 +464,7 @@ public class RegressionSuite_PK {
         DFHC.FT_HelpCenter(driver);
     }
 
-    @Test (priority = 37)
+    @Test (priority = 37,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Appstore Redirection from the footer")
     public void DU_FT_DarazBlog () throws InterruptedException
     {
@@ -475,7 +472,7 @@ public class RegressionSuite_PK {
         DFDB.DarazBlog(driver);
     }
 
-    @Test (priority = 38)
+    @Test (priority = 38,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Sell On Daraz module from the footer")
     public void DU_FT_SellOnDaraz () throws InterruptedException
     {
@@ -483,7 +480,7 @@ public class RegressionSuite_PK {
         DFSOD.SellonDaraz(driver);
     }
 
-    @Test (priority = 39)
+    @Test (priority = 39,retryAnalyzer = DU_AutoRetry.class)
     public void DU_VerifPlayButton() throws InterruptedException
     {
         DU_VerifyPlayButton DUPB = new DU_VerifyPlayButton(driver);
@@ -501,7 +498,7 @@ public class RegressionSuite_PK {
 
  */
 
-    @Test (priority = 41)
+    @Test (priority = 41,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the logout functionality")
     public void DU_Logout() throws InterruptedException
     {

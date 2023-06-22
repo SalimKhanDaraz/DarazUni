@@ -1,11 +1,13 @@
 package DarazUniversity;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Allure;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -16,6 +18,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static DarazUniversity.DU_Wait.driver;
+
 
 public class DU_Portal {
 
@@ -23,10 +27,11 @@ public class DU_Portal {
     XSSFWorkbook workbook;
 
     XSSFSheet sheet;
+    
 
-    //public static String Venture = "NP";
+    public static String Venture = "BD";
 
-    public static String Venture = System.getenv("Venture_Jenkins");
+    //public static String Venture = System.getenv("Venture_Jenkins");
 
     public DU_Portal(WebDriver driver) {PageFactory.initElements(driver, this);}
 
@@ -77,6 +82,8 @@ public class DU_Portal {
 
                 driver.get("https://university.daraz.lk/");
                 Allure.step("Launched Daraz University LK Portal");
+                Allure.step("Launched Daraz University LK Portal");
+
 
                 break;
 
@@ -84,6 +91,8 @@ public class DU_Portal {
 
                 driver.get("https://university.daraz.com.np/");
                 Allure.step("Launched Daraz University NP Portal");
+                Allure.step("Launched Daraz University NP Portal");
+
 
                 break;
 
@@ -91,6 +100,8 @@ public class DU_Portal {
 
                 driver.get("https://university.daraz.com.bd/");
                 Allure.step("Launched Daraz University BD Portal");
+                Allure.step("Launched Daraz University BD Portal");
+
 
                 break;
         }

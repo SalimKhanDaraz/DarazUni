@@ -437,7 +437,7 @@ public class RegressionSuite_PK {
         DFTTAC.TermsAndConditions(driver);
     }
 
-    @Test (priority = 33,enabled = false)
+    @Test (priority = 33)
     @Description ("Verifying Facebook Redirection from the footer")
     public void DU_FT_Facebook() throws InterruptedException
     {
@@ -494,7 +494,7 @@ public class RegressionSuite_PK {
 
 
 
-    @Test (priority = 40, enabled = false)
+    @Test (priority = 40)
     public void DU_OrderFulfillment() throws InterruptedException
     {
         DU_OrderFulfillment DUOF = new DU_OrderFulfillment(driver);

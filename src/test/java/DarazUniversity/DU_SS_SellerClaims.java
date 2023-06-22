@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -61,6 +62,8 @@ public class DU_SS_SellerClaims {
     public WebElement ComplaintBox;
 
     public void DU_SellerClaims (WebDriver driver) throws InterruptedException {
+
+        SoftAssert softAssert = new SoftAssert();
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
@@ -183,7 +186,13 @@ public class DU_SS_SellerClaims {
             System.out.println("************************************");
             Allure.step("Seller Claims Module Failed");
             e.printStackTrace();
+
+            softAssert.assertFalse(true,"Seller Claims Module Failed");
+
         }
+
+        softAssert.assertAll();
+
 
         Thread.sleep(2000);
         driver.close();

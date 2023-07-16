@@ -59,9 +59,14 @@ public class DU_FT_DarazBlog {
 
         Thread.sleep(8000);
 
-        try{
+        String Venture = DU_Portal.Venture;
 
-        if (driver.findElements(By.xpath("//*[@class=\"elementor-widget-container\"]")).size()>0)
+        switch (Venture)
+        {
+
+            case "PK":
+
+        if (driver.findElements(By.xpath("//div[@class=\"swiper-wrapper\"]")).size()>0)
         {
             System.out.println("*******************************************************");
             System.out.println("Check 1: All the Data in Daraz Blog module is Available");
@@ -80,19 +85,92 @@ public class DU_FT_DarazBlog {
             System.out.println("**********************************");
             System.out.println("");
             Allure.step("Daraz Blog module Failed");
-            }
-        }
-        catch (Exception e)
-        {
-            driver.close();
-            driver.switchTo().window(currentHandle);
-        }
 
+            }
+        break;
+
+
+            case "BD":
+
+                if (driver.findElements(By.xpath("//div[@class=\"vc_row wpb_row vc_row-fluid\"]")).size()>0)
+                {
+                    System.out.println("*******************************************************");
+                    System.out.println("Check 1: All the Data in Daraz Blog module is Available");
+                    Allure.step("All of the Data in the Daraz Blog module is Available");
+                    System.out.println("Case 4: Daraz Blog module Passed");
+                    System.out.println("*********************************");
+                    System.out.println("");
+                    Allure.step("Daraz Blog module Passed");
+                }
+                else
+                {
+                    System.out.println("*******************************************************");
+                    System.out.println("Check 2: No data in the Daraz Blog module is Available");
+                    Allure.step("No data in the Daraz Cares Blog is Available");
+                    System.out.println("Case 30: Daraz Cares Blog Failed");
+                    System.out.println("**********************************");
+                    System.out.println("");
+                    Allure.step("Daraz Blog module Failed");
+
+                }
+                break;
+
+            case "LK":
+
+                if (driver.findElements(By.xpath("//*[@class=\"elementor-widget-container\"]")).size()>0)
+                {
+                    System.out.println("*******************************************************");
+                    System.out.println("Check 1: All the Data in Daraz Blog module is Available");
+                    Allure.step("All of the Data in the Daraz Blog module is Available");
+                    System.out.println("Case 4: Daraz Blog module Passed");
+                    System.out.println("*********************************");
+                    System.out.println("");
+                    Allure.step("Daraz Blog module Passed");
+                }
+                else
+                {
+                    System.out.println("*******************************************************");
+                    System.out.println("Check 2: No data in the Daraz Blog module is Available");
+                    Allure.step("No data in the Daraz Cares Blog is Available");
+                    System.out.println("Case 30: Daraz Cares Blog Failed");
+                    System.out.println("**********************************");
+                    System.out.println("");
+                    Allure.step("Daraz Blog module Failed");
+
+                }
+                break;
+
+            case "NP":
+
+                if (driver.findElements(By.xpath("//div[@class=\"wpb_wrapper\"]")).size()>0)
+                {
+                    System.out.println("*******************************************************");
+                    System.out.println("Check 1: All the Data in Daraz Blog module is Available");
+                    Allure.step("All of the Data in the Daraz Blog module is Available");
+                    System.out.println("Case 4: Daraz Blog module Passed");
+                    System.out.println("*********************************");
+                    System.out.println("");
+                    Allure.step("Daraz Blog module Passed");
+                }
+                else
+                {
+                    System.out.println("*******************************************************");
+                    System.out.println("Check 2: No data in the Daraz Blog module is Available");
+                    Allure.step("No data in the Daraz Cares Blog is Available");
+                    System.out.println("Case 30: Daraz Cares Blog Failed");
+                    System.out.println("**********************************");
+                    System.out.println("");
+                    Allure.step("Daraz Blog module Failed");
+
+                }
+                break;
+
+        }
 
        // driver.close();
         softAssert.assertAll();
 
         driver.close();
-       driver.switchTo().window(currentHandle);
+        driver.switchTo().window(currentHandle);
     }
 }

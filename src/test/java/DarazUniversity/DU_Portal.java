@@ -29,7 +29,7 @@ public class DU_Portal {
     XSSFSheet sheet;
     
 
-    //public static String Venture = "LK";
+    //public static String Venture = "NP";
 
     public static String Venture = System.getenv("Venture_Jenkins");
 

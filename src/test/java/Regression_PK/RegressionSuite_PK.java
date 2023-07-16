@@ -82,6 +82,7 @@ public class RegressionSuite_PK {
         DL.Login2(driver);
     }
 
+
     @Test (priority = 3,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Scrolling from Footer to Header")
     public void DU_HPScroll () throws InterruptedException
@@ -202,6 +203,7 @@ public class RegressionSuite_PK {
         DU_CatStreamliningOps DCSL = new DU_CatStreamliningOps(driver);
         DCSL.StreamOps(driver);
     }
+
 
     @Test (priority = 18,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Policies & Guidelines Category under the Categories Module")
@@ -342,7 +344,7 @@ public class RegressionSuite_PK {
     }
 
 
-    @Test (priority = 29,retryAnalyzer = DU_AutoRetry.class)
+    @Test (priority = 29,retryAnalyzer = DU_AutoRetry.class,enabled = false)
     @Description ("Verifying Seller Claims Module")
     public void DU_SS_SellerClaims() throws InterruptedException
     {

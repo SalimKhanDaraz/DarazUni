@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="09cbe4ea-f95a-4317-8f6b-33a4b2394c0f" name="Changes" comment="Venture configuration from Jenkins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatPoliciesAndGuidlines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatPoliciesAndGuidlines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_DarazBlog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_DarazBlog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_SellOnDaraz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_SellOnDaraz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Portal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Portal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SS_SellerClaims.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SS_SellerClaims.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Regression_PK/RegressionSuite_PK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Regression_PK/RegressionSuite_PK.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +49,10 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
 }</component>
   <component name="RunManager" selected="TestNG.&lt;default&gt;">
@@ -208,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687460453236</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Venture configuration from Jenkins">
+      <created>1687461282313</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1687461282313</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

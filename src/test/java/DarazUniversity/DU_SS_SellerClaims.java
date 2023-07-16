@@ -193,7 +193,6 @@ public class DU_SS_SellerClaims {
 
         softAssert.assertAll();
 
-
         Thread.sleep(2000);
         driver.close();
         driver.switchTo().window(Tab.get(0));

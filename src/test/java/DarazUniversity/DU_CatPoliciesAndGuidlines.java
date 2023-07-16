@@ -25,7 +25,7 @@ public class DU_CatPoliciesAndGuidlines {
     @FindBy(xpath="//*[text()=\"Categories\"]")
     public WebElement Categories;
 
-    @FindBy(xpath="//*[text()=\"Policies & Guidelines\"]")
+    @FindBy(xpath="//span[text()=\"Policies & Guidelines\"]")
     public WebElement PoliciesAndGuidlines;
 
     @FindBy(xpath="//*[text()=\"View all \"]")
@@ -34,8 +34,8 @@ public class DU_CatPoliciesAndGuidlines {
     @FindBy(xpath="//*[text()=\"Seller Claims Policy\"]")
     public WebElement SellerClaimsPolicy_PK;
 
-    @FindBy(xpath="//*[text()=\"Seller Claims Policy\"]")
-    public WebElement SellerClaimsPolicy_LK;
+    @FindBy(xpath="//a[text()=\"Seller Compliance\"]")
+    public WebElement SellerCompliance;
 
     @FindBy(xpath="//*[text()=\"Marketplace Commission Structure\"]")
     public WebElement SellerClaimsPolicy_BD;
@@ -59,7 +59,7 @@ public class DU_CatPoliciesAndGuidlines {
         Allure.step("Clicked on Categories Tab on the Navigation bar");
 
         Thread.sleep(1500);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Policies & Guidelines\"]")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()=\"Policies & Guidelines\"]")));
         PoliciesAndGuidlines.click();
         Allure.step("Clicked on the Policies & Guidelines module");
 
@@ -81,9 +81,17 @@ public class DU_CatPoliciesAndGuidlines {
 
             case "LK":
 
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Seller Claims Policy\"]")));
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Search by Tag\"]")));
+                ContentType_Filter.click();
+
                 Thread.sleep(1500);
-                SellerClaimsPolicy_LK.click();
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
+                Filter_Selection.click();
+
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()=\"Seller Compliance\"]")));
+                Thread.sleep(1500);
+                SellerCompliance.click();
                 Allure.step("Clicked on the Seller Claims Policy course");
 
                 break;
@@ -95,10 +103,11 @@ public class DU_CatPoliciesAndGuidlines {
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Search by Tag\"]")));
                 ContentType_Filter.click();
 
+                Thread.sleep(1500);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
                 Filter_Selection.click();
 
-                Thread.sleep(1500);
+                Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Marketplace Commission Structure\"]")));
                 SellerClaimsPolicy_BD.click();
                 Allure.step("Clicked on the Seller Claims Policy course");

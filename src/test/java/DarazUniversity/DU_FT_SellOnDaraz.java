@@ -35,6 +35,7 @@ public class DU_FT_SellOnDaraz {
         Thread.sleep(3000);
 
         js.executeScript("arguments[0].scrollIntoView();", SellonDaraz_Button);
+        js.executeScript("arguments[0].scrollIntoView();", SellonDaraz_Button);
         //js.executeScript("arguments[0].scrollIntoView();", AboutUS);
 
         Thread.sleep(4000);
@@ -56,9 +57,9 @@ public class DU_FT_SellOnDaraz {
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
        // driver.switchTo().window(tabs.get(4));
 
-        Thread.sleep(2000);
+        Thread.sleep(5000);
 
-        if (driver.findElements(By.xpath("//*[@class=\"lzd-act-banner region-pk\"]")).size()>0)
+        if (driver.findElements(By.xpath("//*[@class=\"flex-item\"]")).size()>0)
         {
             System.out.println("********************************************************");
             System.out.println("Check 1: Data in the Sell on Daraz module is Available");

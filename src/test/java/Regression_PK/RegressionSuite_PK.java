@@ -344,7 +344,7 @@ public class RegressionSuite_PK {
     }
 
 
-    @Test (priority = 29,retryAnalyzer = DU_AutoRetry.class,enabled = false)
+    @Test (priority = 29,retryAnalyzer = DU_AutoRetry.class, enabled = false)
     @Description ("Verifying Seller Claims Module")
     public void DU_SS_SellerClaims() throws InterruptedException
     {

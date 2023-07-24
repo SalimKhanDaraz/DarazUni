@@ -20,7 +20,7 @@ public class DU_SellerSupport {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//*[text()=\"Seller Support\" and @class=\"recommend-trigger\"]")
+    @FindBy(xpath = "//a[normalize-space()='Seller Support']")
     public WebElement SellerSupportTab;
 
     @FindBy(xpath = "//*[text()=\"Support Center\"]")

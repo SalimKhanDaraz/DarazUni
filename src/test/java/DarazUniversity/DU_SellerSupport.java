@@ -39,8 +39,8 @@ public class DU_SellerSupport {
         try {
 
 
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Seller Support\" and @class=\"recommend-trigger\"]")));
-            Thread.sleep(5000);
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Seller Support']")));
+            Thread.sleep(8000);
             Actions action = new Actions(driver);
             action.moveToElement(SellerSupportTab).perform();
             Allure.step("Hovered Seller Support tab");

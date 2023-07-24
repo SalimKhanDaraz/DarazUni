@@ -36,8 +36,6 @@ public class DU_SellerSupport {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
-        try {
-
             Thread.sleep(10000);
             Actions action = new Actions(driver);
             action.moveToElement(SellerSupportTab).perform();
@@ -59,7 +57,9 @@ public class DU_SellerSupport {
                 System.out.println("");
                 Allure.step("Support Center Module Passed");
 
-            } else {
+            }
+            else
+            {
                 System.out.println("***************************************************");
                 System.out.println("Check 2: Support Center Sections are not Available");
                 Allure.step("No Data is available in the Support Center");
@@ -70,11 +70,7 @@ public class DU_SellerSupport {
                 softAssert.assertTrue(false, "No Data is available in the Support Center");
 
             }
-        }catch (Exception e)
-        {
-            System.out.println("Case 26: Support Center Module Failed");
-            e.printStackTrace();
-        }
+
         softAssert.assertAll();
     }
 }

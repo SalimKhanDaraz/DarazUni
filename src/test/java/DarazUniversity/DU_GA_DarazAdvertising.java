@@ -22,7 +22,7 @@ public class DU_GA_DarazAdvertising {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath="//*[text()=\"Growth Assistant\"]")
+    @FindBy(xpath="//a[normalize-space()='Growth Assistant']")
     public WebElement GrowthAssistant;
 
     @FindBy(xpath="//*[text()=\"Daraz Advertising Solutions\"]")
@@ -37,7 +37,7 @@ public class DU_GA_DarazAdvertising {
         ArrayList<String> Tab = new ArrayList<String>(driver.getWindowHandles());
 
         Thread.sleep(1500);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Growth Assistant\"]")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[normalize-space()='Growth Assistant']")));
         Actions action = new Actions(driver);
         action.moveToElement(GrowthAssistant).perform();
         GrowthAssistant.click();

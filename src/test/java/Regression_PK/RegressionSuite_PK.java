@@ -44,9 +44,10 @@ public class RegressionSuite_PK {
         DTD.browserclose(driver);
     }
 
-    @AfterTest()
+
     @AfterMethod
     public void TakeScreenshot() throws IOException {
+
         File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         File dest = new File(System.getProperty("user.dir")+ "/Images/" + LocalTime.now() + ".jpg");
         FileUtils.copyFile(screenshot,dest);

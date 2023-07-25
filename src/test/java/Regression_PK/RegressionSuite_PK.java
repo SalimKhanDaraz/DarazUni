@@ -2,14 +2,24 @@ package Regression_PK;
 
 import DarazUniversity.*;
 import DarazUniversity.DU_Login;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
+import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 import static DarazUniversity.DU_Wait.driver;
 
@@ -32,6 +42,15 @@ public class RegressionSuite_PK {
     {
         DU_Teardown DTD = new DU_Teardown(driver);
         DTD.browserclose(driver);
+    }
+
+    @AfterTest()
+    @AfterMethod
+    public void TakeScreenshot() throws IOException {
+        File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File dest = new File(System.getProperty("user.dir")+ "/Images/" + LocalTime.now() + ".jpg");
+        FileUtils.copyFile(screenshot,dest);
+        Allure.addAttachment("FailureTestCase",new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
     }
 
     /*
@@ -285,6 +304,7 @@ public class RegressionSuite_PK {
 
 
     }
+
 
     @Test (priority = 24,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Daraz Live Sub Module under the Growth Assistant Module")

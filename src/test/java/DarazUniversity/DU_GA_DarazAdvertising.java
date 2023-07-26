@@ -32,19 +32,19 @@ public class DU_GA_DarazAdvertising {
 
         SoftAssert softAssert = new SoftAssert();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         ArrayList<String> Tab = new ArrayList<String>(driver.getWindowHandles());
 
         Thread.sleep(1500);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[normalize-space()='Growth Assistant']")));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[normalize-space()='Growth Assistant']")));
         Actions action = new Actions(driver);
         action.moveToElement(GrowthAssistant).perform();
         GrowthAssistant.click();
         Allure.step("Hovered on the Growth Assistant Tab on the Navigation bar");
 
         Thread.sleep(1500);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Daraz Advertising Solutions\"]")));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Daraz Advertising Solutions\"]")));
         DarazAdvertising.click();
         Allure.step("Clicked on the Daraz Advertising Solution module");
 

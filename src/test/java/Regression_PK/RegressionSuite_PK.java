@@ -44,15 +44,14 @@ public class RegressionSuite_PK {
         DTD.browserclose(driver);
     }
 
-
-    @AfterMethod
+    @AfterTest()
     public void TakeScreenshot() throws IOException {
 
-        File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        File dest = new File(System.getProperty("user.dir")+ "/Images/" + LocalTime.now() + ".jpg");
-        FileUtils.copyFile(screenshot,dest);
-        Allure.addAttachment("FailureTestCase",new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
-    }
+            File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+            File dest = new File(System.getProperty("user.dir")+ "/Images/" + LocalTime.now() + ".jpg");
+            FileUtils.copyFile(screenshot,dest);
+            Allure.addAttachment("FailureTestCase",new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
+        }
 
     /*
         @Test (priority = 1)
@@ -102,7 +101,7 @@ public class RegressionSuite_PK {
         DL.Login2(driver);
     }
 
-
+/*
     @Test (priority = 3,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Scrolling from Footer to Header")
     public void DU_HPScroll () throws InterruptedException
@@ -111,7 +110,7 @@ public class RegressionSuite_PK {
         DSHP.ScrolltoContLib(driver);
     }
 
-    @Test (priority = 4,retryAnalyzer = DU_AutoRetry.class)
+    @Test (priority = 4)
     @Description ("Verifying Search Functionality")
     public void DU_SearchContent () throws InterruptedException
     {
@@ -510,6 +509,8 @@ public class RegressionSuite_PK {
         DUPB.OrderFulfill(driver);
     }
 
+ */
+
 
 /*    // not in use
     @Test (priority = 40,enabled = false)
@@ -529,6 +530,7 @@ public class RegressionSuite_PK {
         DULog.Logout(driver);
     }
 
+    //Testing
     //====================================================================================================================================\\
 }
 

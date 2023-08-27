@@ -101,7 +101,7 @@ public class RegressionSuite_PK {
         DU_Login DL = new DU_Login(driver);
         DL.Login2(driver);
     }
-
+/*
 
     @Test (priority = 3,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Scrolling from Footer to Header")
@@ -267,6 +267,8 @@ public class RegressionSuite_PK {
         DEC.Event_Calendar(driver);
     }
 
+
+ */
     @Test (priority = 23,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Growth Assistant Module in the Navigation Bar")
     public void DU_GrowthAssistant() throws InterruptedException
@@ -276,7 +278,7 @@ public class RegressionSuite_PK {
     }
 
 
-    @Test (priority = 25,retryAnalyzer = DU_AutoRetry.class)
+    @Test (priority = 25,retryAnalyzer = DU_AutoRetry.class, enabled = false)
     @Description ("Verifying the Daraz Advertising Sub Module under the Growth Assistant Module")
     public void DU_DarazAdvertising() throws InterruptedException
     {

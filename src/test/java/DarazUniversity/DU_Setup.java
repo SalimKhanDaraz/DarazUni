@@ -16,8 +16,12 @@ import static DarazUniversity.DU_Wait.driver;
 
 public class DU_Setup {
 
+
+    // Testing
+
+
     public DU_Setup(WebDriver driver) {
-        DU_Wait.driver = driver;
+        //DU_Wait.driver = driver;
         PageFactory.initElements(driver, this);
     }
 

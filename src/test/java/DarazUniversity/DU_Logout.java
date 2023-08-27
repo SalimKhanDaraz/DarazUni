@@ -25,6 +25,9 @@ public class DU_Logout extends DU_Wait{
     @FindBy(xpath="//*[@id=\"root\"]/div/div[1]/header/div/div[2]/img[2]")
     public WebElement Logoutbutton;
 
+
+    // Testing
+
     public void Logout(WebDriver driver) throws InterruptedException {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

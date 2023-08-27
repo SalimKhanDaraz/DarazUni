@@ -9,10 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 
 import java.io.ByteArrayInputStream;
@@ -27,17 +24,21 @@ public class RegressionSuite_PK {
 
     DU_Setup DB = new DU_Setup(driver);
     DU_Teardown DTD = new DU_Teardown(driver);
+
+    // Testing
+
+
 /*
     public RegressionSuite_PK() throws IOException {
     }
  */
 
-    @BeforeTest
+    @BeforeSuite
     public void DU_Setup() throws InterruptedException, IOException {
         DU_Wait.driver = DB.driver();
     }
 
-    @AfterTest()
+    @AfterSuite
     public void DU_TearDown() throws InterruptedException
     {
         DU_Teardown DTD = new DU_Teardown(driver);

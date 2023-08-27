@@ -24,13 +24,13 @@ public class DU_CatGettingStarted {
     @FindBy(xpath="//*[text()=\"Categories\"]")
     public WebElement Categories;
 
-    @FindBy(xpath="//*[text()=\"Getting Started\"]")
+    @FindBy(xpath="//span[text()=\"Getting Started\"]")
     public WebElement GettingStartedModule;
 
     @FindBy(xpath="//*[text()=\"View all \"]")
     public WebElement Viewall;
 
-    @FindBy(xpath="//*[text()=\"Getting Started On Daraz\"]")
+    @FindBy(xpath="//a[text()=\"Welcome to Daraz \"]")
     public WebElement GettingStartedOnDaraz_PK;
 
     @FindBy(xpath="//*[text()=\"Startup Guide to Daraz Seller Center\"]")
@@ -79,7 +79,7 @@ public class DU_CatGettingStarted {
 
 
         Thread.sleep(1500);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Getting Started\"]")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()=\"Getting Started\"]")));
         GettingStartedModule.click();
         Allure.step("Clicked on Getting Started module");
 
@@ -113,7 +113,7 @@ public class DU_CatGettingStarted {
                 Focus_Shift.click();
 
                 Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Getting Started On Daraz\"]")));
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()=\"Welcome to Daraz \"]")));
                 GettingStartedOnDaraz_PK.click();
                 Allure.step("Clicked on Getting Started On Daraz tutorial");
 

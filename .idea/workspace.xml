@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09cbe4ea-f95a-4317-8f6b-33a4b2394c0f" name="Changes" comment="Venture configuration from Jenkins">
+    <list default="true" id="09cbe4ea-f95a-4317-8f6b-33a4b2394c0f" name="Changes" comment="Testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatGettingStarted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatGettingStarted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Logout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Portal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Portal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Setup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Regression_PK/DU_AutoRetry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Regression_PK/DU_AutoRetry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Regression_PK/RegressionSuite_PK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Regression_PK/RegressionSuite_PK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +36,23 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatGettingStarted.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatPoliciesAndGuidlines.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatRecommendedCourses.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_GA_DarazAdvertising.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_GA_DarazLive.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Login.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Portal.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_ScrollHP.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_ScrollOSSSection.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SearchContent.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Setup.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Teardown.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/Regression_PK/DU_AutoRetry.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/Regression_PK/RegressionSuite_PK.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -45,6 +69,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/salim/Desktop/AppiumProject/DarazUni&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -290,7 +315,49 @@
       <option name="project" value="LOCAL" />
       <updated>1690301554826</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Venture configuration from Jenkins">
+      <created>1690302303885</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1690302303885</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Venture configuration from Jenkins">
+      <created>1690357945309</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1690357945309</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Venture configuration from Jenkins">
+      <created>1690358902114</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1690358902114</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Venture configuration from Jenkins">
+      <created>1690465249331</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1690465249331</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Testing">
+      <created>1690467126388</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1690467126388</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Testing">
+      <created>1690982027511</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1690982027511</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,6 +373,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Venture configuration from Jenkins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Venture configuration from Jenkins" />
+    <MESSAGE value="Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing" />
   </component>
 </project>

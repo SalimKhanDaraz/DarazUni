@@ -102,7 +102,7 @@ public class RegressionSuite_PK {
         DL.Login2(driver);
     }
 
-/*
+
     @Test (priority = 3,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Scrolling from Footer to Header")
     public void DU_HPScroll () throws InterruptedException
@@ -509,9 +509,6 @@ public class RegressionSuite_PK {
         DU_VerifyPlayButton DUPB = new DU_VerifyPlayButton(driver);
         DUPB.OrderFulfill(driver);
     }
-
- */
-
 
 /*    // not in use
     @Test (priority = 40,enabled = false)

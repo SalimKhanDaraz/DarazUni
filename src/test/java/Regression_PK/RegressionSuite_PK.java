@@ -370,8 +370,6 @@ public class RegressionSuite_PK {
     public void DU_SS_SellerClaims() throws InterruptedException
     {
         DU_SS_SellerClaims  DSSSC = new DU_SS_SellerClaims(driver);
-     //   DSSSC.DU_SellerClaims(driver);
-
         String Venture = DU_Portal.Venture;
 
         switch (Venture)

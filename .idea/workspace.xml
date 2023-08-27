@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09cbe4ea-f95a-4317-8f6b-33a4b2394c0f" name="Changes" comment="Fixes">
+    <list default="true" id="09cbe4ea-f95a-4317-8f6b-33a4b2394c0f" name="Changes" comment="Uncommented some code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +30,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatGettingStarted.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatListingProducts.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatPoliciesAndGuidlines.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatRecommendedCourses.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/DarazUniversity/DU_GA_DarazAdvertising.java" root0="FORCE_HIGHLIGHTING" />
@@ -369,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693129057290</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Uncommented some code">
+      <created>1693129299486</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1693129299486</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,6 +395,7 @@
     <MESSAGE value="Venture configuration from Jenkins" />
     <MESSAGE value="Testing" />
     <MESSAGE value="Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes" />
+    <MESSAGE value="Uncommented some code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uncommented some code" />
   </component>
 </project>

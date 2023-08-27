@@ -20,7 +20,7 @@ public class DU_GA_DarazLive {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath="//*[text()=\"Growth Assistant\"]")
+    @FindBy(xpath="//a[text()=\"Growth Assistant\"]")
     public WebElement GrowthAssistant;
 
     @FindBy(xpath="//*[text()=\"DarazLive\"]")

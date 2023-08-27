@@ -22,7 +22,7 @@ public class DU_GA_DarazAdvertising {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath="//a[normalize-space()='Growth Assistant']")
+    @FindBy(xpath="//a[text()=\"Growth Assistant\"]")
     public WebElement GrowthAssistant;
 
     @FindBy(xpath="//a[text()=\"Daraz Advertising Solutions\"]")

@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09cbe4ea-f95a-4317-8f6b-33a4b2394c0f" name="Changes" comment="Uncommented some code">
+    <list default="true" id="09cbe4ea-f95a-4317-8f6b-33a4b2394c0f" name="Changes" comment="Uncommented some code1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatGettingStarted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatGettingStarted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_GA_DarazAdvertising.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_GA_DarazAdvertising.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Regression_PK/RegressionSuite_PK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Regression_PK/RegressionSuite_PK.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +50,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2K4mR6sVdaYekuwhJF05p2HO8xN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -377,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693129299486</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Uncommented some code1">
+      <created>1693129527772</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1693129527772</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -396,6 +409,7 @@
     <MESSAGE value="Testing" />
     <MESSAGE value="Fixes" />
     <MESSAGE value="Uncommented some code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uncommented some code" />
+    <MESSAGE value="Uncommented some code1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uncommented some code1" />
   </component>
 </project>

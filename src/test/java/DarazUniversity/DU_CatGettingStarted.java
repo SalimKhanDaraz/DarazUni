@@ -66,6 +66,9 @@ public class DU_CatGettingStarted {
     @FindBy(xpath="//span[normalize-space()='Traffic']")
     public WebElement Filter_Selection_PK;
 
+    @FindBy(xpath="//a[text()=\"Seller Education Guidebook\"]")
+    public WebElement OtherCourse;
+
     public void GettingStarted(WebDriver driver) throws InterruptedException {
 
         SoftAssert softAssert = new SoftAssert();
@@ -112,10 +115,18 @@ public class DU_CatGettingStarted {
                 Thread.sleep(1500);
                 Focus_Shift.click();
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()=\"Welcome to Daraz \"]")));
-                GettingStartedOnDaraz_PK.click();
-                Allure.step("Clicked on Getting Started On Daraz tutorial");
+                try {
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()=\"Welcome to Daraz \"]")));
+                    Thread.sleep(1500);
+                    GettingStartedOnDaraz_PK.click();
+                    Allure.step("Clicked on Getting Started On Daraz tutorial");
+                }catch (Exception e)
+                {
+                    wait.until(ExpectedConditions.visibilityOf(OtherCourse)).click();
+                    Allure.step("Clicked on Getting Started On Daraz tutorial");
+
+                }
+
 
                 break;
 

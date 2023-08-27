@@ -192,6 +192,7 @@ public class RegressionSuite_PK {
         DCGS.GettingStarted(driver);
     }
 
+
     @Test (priority = 14,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Listing Products Category under the Categories Module")
     public void DU_CatListingProducts() throws InterruptedException
@@ -273,6 +274,7 @@ public class RegressionSuite_PK {
         DU_GA_SellersAcheivement DGA = new DU_GA_SellersAcheivement(driver);
         DGA.GrowthAssistant(driver);
     }
+
 
     @Test (priority = 25,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Daraz Advertising Sub Module under the Growth Assistant Module")

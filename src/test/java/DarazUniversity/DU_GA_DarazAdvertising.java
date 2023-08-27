@@ -25,25 +25,27 @@ public class DU_GA_DarazAdvertising {
     @FindBy(xpath="//a[normalize-space()='Growth Assistant']")
     public WebElement GrowthAssistant;
 
-    @FindBy(xpath="//*[text()=\"Daraz Advertising Solutions\"]")
+    @FindBy(xpath="//a[text()=\"Daraz Advertising Solutions\"]")
     public WebElement DarazAdvertising;
 
     public void DarazAdvertisingSol(WebDriver driver) throws InterruptedException {
 
         SoftAssert softAssert = new SoftAssert();
 
-        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         ArrayList<String> Tab = new ArrayList<String>(driver.getWindowHandles());
 
         Thread.sleep(10000);
         //new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[normalize-space()='Growth Assistant']")));
         Actions action = new Actions(driver);
-        action.moveToElement(GrowthAssistant).perform();
+        action.moveToElement(wait.until(ExpectedConditions.visibilityOf(GrowthAssistant))).perform();
         GrowthAssistant.click();
         Allure.step("Hovered on the Growth Assistant Tab on the Navigation bar");
 
-        Thread.sleep(10000);
+
+
+        Thread.sleep(3000);
        // new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Daraz Advertising Solutions\"]")));
         DarazAdvertising.click();
         Allure.step("Clicked on the Daraz Advertising Solution module");

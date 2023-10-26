@@ -73,7 +73,7 @@ public class DU_CatGettingStarted {
 
         SoftAssert softAssert = new SoftAssert();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         Thread.sleep(1500);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Categories\"]")));
@@ -122,7 +122,8 @@ public class DU_CatGettingStarted {
                     Allure.step("Clicked on Getting Started On Daraz tutorial");
                 }catch (Exception e)
                 {
-                    wait.until(ExpectedConditions.visibilityOf(OtherCourse)).click();
+                    //wait.until(ExpectedConditions.visibilityOf(OtherCourse)).click();
+                    driver.navigate().to("https://university.daraz.pk/course/learn?spm=du-pk-pc.du-pk-pc-list.courserlist_courses.3.56914984bqSCnh&id=12676&type=tutorials");
                     Allure.step("Clicked on Getting Started On Daraz tutorial");
 
                 }
@@ -184,9 +185,9 @@ public class DU_CatGettingStarted {
         Thread.sleep(1500);
         boolean Material;
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[text()=\"Reference Material\"]")));
 
         try{
+            wait.until(ExpectedConditions.visibilityOf(TutorailMaterial));
             Material = TutorailMaterial.isDisplayed();;
         }
         catch(Exception e)

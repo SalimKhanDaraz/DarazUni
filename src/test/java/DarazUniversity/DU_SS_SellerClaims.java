@@ -65,7 +65,7 @@ public class DU_SS_SellerClaims {
 
         SoftAssert softAssert = new SoftAssert();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         ArrayList<String> Tab = new ArrayList<String>(driver.getWindowHandles());
 

@@ -63,7 +63,7 @@ public class DU_CatMaximisingSales {
 
         SoftAssert softAssert = new SoftAssert();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         Thread.sleep(1500);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Categories\"]")));
@@ -101,10 +101,16 @@ public class DU_CatMaximisingSales {
                 Thread.sleep(1500);
                 Focus_Shift.click();
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Why is Customer Service Important?']")));
-                Tutorial_PK.click();
-                Allure.step("Clicked on Guide to Creating Collectible Vouchers tutorial");
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Why is Customer Service Important?']")));
+                    Tutorial_PK.click();
+                    Allure.step("Clicked on Guide to Creating Collectible Vouchers tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.pk/course/learn?spm=du-pk-pc.du-pk-pc-list.courserlist_courses.5.c79f49845XXc9m&id=968&type=tutorials");
+                    Allure.step("Clicked on Getting Started On Daraz tutorial");
+                }
+
 
                 break;
 

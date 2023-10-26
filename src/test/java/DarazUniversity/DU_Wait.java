@@ -11,6 +11,6 @@ public class DU_Wait {
     //public static WebDriverWait wait =null;
     public static WebDriverWait waitforelement()
     {
-        return new WebDriverWait(driver, Duration.ofSeconds(30));
+        return new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 }

@@ -53,7 +53,7 @@ public class DU_FT_AboutUs {
 
         SoftAssert softAssert = new SoftAssert();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
 

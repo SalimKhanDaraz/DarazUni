@@ -32,7 +32,7 @@ public class DU_SS_PoliciesAndGuidelines {
 
     public void DU_PoliciesAndGuideline (WebDriver driver) throws InterruptedException {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         Thread.sleep(1500);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Seller Support\" and @class=\"recommend-trigger\"]")));

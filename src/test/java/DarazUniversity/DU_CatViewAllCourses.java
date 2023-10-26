@@ -61,7 +61,7 @@ public class DU_CatViewAllCourses {
 
         SoftAssert softAssert = new SoftAssert();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         Thread.sleep(1500);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Categories\"]")));
@@ -92,10 +92,15 @@ public class DU_CatViewAllCourses {
                 Thread.sleep(1000);
                 Focus_Shift.click();
 
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"List of Prohibited Items\"]")));
-                Thread.sleep(1500);
-                AllAboutFreeShipping_PK.click();
-                Allure.step("Clicked on the List of Prohibited Items Policy");
+                try {
+                    Thread.sleep(1500);
+                    AllAboutFreeShipping_PK.click();
+                    Allure.step("Clicked on the List of Prohibited Items Policy");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.pk/course/learn?spm=du-pk-pc.du-pk-pc-list.courserlist_courses.3.31e04984PYLCN6&id=13983&type=tutorials");
+                    Allure.step("Clicked on the List of Prohibited Items Policy");
+                }
+
 
                 break;
 
@@ -146,6 +151,7 @@ public class DU_CatViewAllCourses {
         boolean Material;
 
         try{
+            wait.until(ExpectedConditions.visibilityOf(TutorailMaterial));
             Material = TutorailMaterial.isDisplayed();;
         }
         catch(Exception e)

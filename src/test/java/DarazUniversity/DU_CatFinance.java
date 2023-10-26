@@ -40,7 +40,7 @@ public class DU_CatFinance {
 
         SoftAssert softAssert = new SoftAssert();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         Thread.sleep(1500);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Categories\"]")));
@@ -48,7 +48,7 @@ public class DU_CatFinance {
         Allure.step("Clicked on Categories Tab on the Navigation bar");
 
         Thread.sleep(1500);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Finance\"]")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()=\"Finance\"]")));
         Finance.click();
         Allure.step("Clicked on Finance module");
 

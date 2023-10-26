@@ -46,7 +46,7 @@ public class DU_EventCalendar {
 
         public void Event_Calendar (WebDriver driver) throws InterruptedException {
 
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
             Thread.sleep(1500);
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Event Calendar\"]")));

@@ -23,7 +23,7 @@ public class DU_ScrolltoSellersTool {
 
     public void ScrolltoST(WebDriver driver) throws InterruptedException {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         Thread.sleep(1000);
 

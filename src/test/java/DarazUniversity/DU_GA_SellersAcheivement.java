@@ -30,7 +30,7 @@ public class DU_GA_SellersAcheivement {
 
     public void GrowthAssistant(WebDriver driver) throws InterruptedException {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         Thread.sleep(1500);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Growth Assistant\"]")));

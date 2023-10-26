@@ -32,7 +32,7 @@ public class DU_NewSellerTraining {
 
     public void NewSeller_Section() throws InterruptedException {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         SoftAssert softAssert = new SoftAssert();
 

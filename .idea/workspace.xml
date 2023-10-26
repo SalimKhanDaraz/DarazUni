@@ -4,7 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09cbe4ea-f95a-4317-8f6b-33a4b2394c0f" name="Changes" comment="Fixies">
+    <list default="true" id="09cbe4ea-f95a-4317-8f6b-33a4b2394c0f" name="Changes" comment="Skipped Daraz Advertising Class for Now">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatFinance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatFinance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatGettingStarted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatGettingStarted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatListingProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatListingProducts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatMaximisingSales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatMaximisingSales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatOrderFulfillment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatOrderFulfillment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatPoliciesAndGuidlines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatPoliciesAndGuidlines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatRecommendedCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatRecommendedCourses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatStreamliningOps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatStreamliningOps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatViewAllCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_CatViewAllCourses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_ContentLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_ContentLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_EventCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_EventCalendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_AboutUs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_AboutUs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_AppStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_AppStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_ContactUS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_ContactUS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_DarazBlog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_DarazBlog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_DarazCares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_DarazCares.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_Facebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_Facebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_HelpCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_HelpCenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_Playstore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_Playstore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_SellOnDaraz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_SellOnDaraz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_TermsAndConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_FT_TermsAndConditions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_GA_DarazAdvertising.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_GA_DarazAdvertising.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_GA_DarazLive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_GA_DarazLive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_GA_SellersAcheivement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_GA_SellersAcheivement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_NeedMoreHelp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_NeedMoreHelp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_NewSellerTraining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_NewSellerTraining.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_PoliciesAndGuidelines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_PoliciesAndGuidelines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Portal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Portal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SS_ContactUs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SS_ContactUs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SS_Newsletter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SS_Newsletter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SS_PoliciesAndGuidelines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SS_PoliciesAndGuidelines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SS_SellerClaims.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SS_SellerClaims.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_ScrollHP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_ScrollHP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_ScrollOSSSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_ScrollOSSSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_ScrolltoSellersTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_ScrolltoSellersTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SearchContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SearchContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SellerSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_SellerSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Setup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_VerifyPlayButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_VerifyPlayButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DarazUniversity/DU_Wait.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Regression_PK/RegressionSuite_PK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Regression_PK/RegressionSuite_PK.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -408,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693142082167</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Skipped Daraz Advertising Class for Now">
+      <created>1693142648973</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1693142648973</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -429,6 +479,7 @@
     <MESSAGE value="Uncommented some code" />
     <MESSAGE value="Uncommented some code1" />
     <MESSAGE value="Fixies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixies" />
+    <MESSAGE value="Skipped Daraz Advertising Class for Now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skipped Daraz Advertising Class for Now" />
   </component>
 </project>

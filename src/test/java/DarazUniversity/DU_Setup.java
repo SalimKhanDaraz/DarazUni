@@ -1,6 +1,7 @@
 package DarazUniversity;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -34,6 +35,8 @@ public class DU_Setup {
             WebDriverManager.chromedriver().setup();
             ChromeDriverService service = ChromeDriverService.createDefaultService();
             ChromeOptions options = new ChromeOptions();
+            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+            options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             options.addArguments("--headless","--remote-allow-origins=*");
             driver = new ChromeDriver(service, options);
         }
@@ -44,8 +47,9 @@ public class DU_Setup {
             ChromeDriverService service = ChromeDriverService.createDefaultService();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--remote-allow-origins=*");
-            options.addArguments("--headless");
+         //   options.addArguments("--headless");
             options.setBinary("/usr/bin/google-chrome");
+            options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             options.addArguments("disable-dev-shm-usage"); // recommended for running in Docker
             options.addArguments("no-sandbox"); // recommended for running in Docker
             options.addArguments("start-maximized"); // recommended for running in Docker
@@ -53,7 +57,7 @@ public class DU_Setup {
             options.setExperimentalOption("useAutomationExtension", false);
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-component-update", "disable-default-apps", "disable-popup-blocking"));
-            Runtime.getRuntime().exec("xvfb-run -a -s \"-screen 0 1920x1080x24\" google-chrome");
+          //  Runtime.getRuntime().exec("xvfb-run -a -s \"-screen 0 1920x1080x24\" google-chrome");
             driver = new ChromeDriver(service, options);
 
         }

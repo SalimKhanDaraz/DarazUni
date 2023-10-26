@@ -23,7 +23,7 @@ public class DU_ScrollOSSSection {
 
     public void ScrolltoOSS(WebDriver driver) throws InterruptedException {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         Thread.sleep(2000);
 

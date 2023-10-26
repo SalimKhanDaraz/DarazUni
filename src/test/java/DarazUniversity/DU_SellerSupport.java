@@ -34,7 +34,7 @@ public class DU_SellerSupport {
 
         SoftAssert softAssert = new SoftAssert();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
             Thread.sleep(10000);
             Actions action = new Actions(driver);

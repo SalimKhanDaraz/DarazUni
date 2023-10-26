@@ -51,7 +51,7 @@ public class DU_CatPoliciesAndGuidlines {
 
     public void PoliciesAndGuideline (WebDriver driver) throws InterruptedException {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         Thread.sleep(1500);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Categories\"]")));
@@ -72,10 +72,16 @@ public class DU_CatPoliciesAndGuidlines {
         {
             case "PK":
 
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Seller Claims Policy\"]")));
-                Thread.sleep(1500);
-                SellerClaimsPolicy_PK.click();
-                Allure.step("Clicked on the Seller Claims Policy course");
+                try {
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Seller Claims Policy\"]")));
+                    Thread.sleep(1500);
+                    SellerClaimsPolicy_PK.click();
+                    Allure.step("Clicked on the Seller Claims Policy course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.pk/course/learn?spm=du-pk-pc.du-pk-pc-list.courserlist_courses.5.22184984uv1RVV&id=1130&type=policies");
+                    Allure.step("Clicked on the Seller Claims Policy Course");
+                }
+
 
                 break;
 

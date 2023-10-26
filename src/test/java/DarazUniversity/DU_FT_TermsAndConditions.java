@@ -32,9 +32,7 @@ public class DU_FT_TermsAndConditions {
         SoftAssert softAssert = new SoftAssert();
 
         ArrayList<String> Tab = new ArrayList<String>(driver.getWindowHandles());
-
         JavascriptExecutor js = (JavascriptExecutor) driver;
-
         Thread.sleep(2000);
 
         js.executeScript("arguments[0].scrollIntoView();", TermsAndConditions_Button);

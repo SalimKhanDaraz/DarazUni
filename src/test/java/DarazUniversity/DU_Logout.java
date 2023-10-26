@@ -30,7 +30,7 @@ public class DU_Logout extends DU_Wait{
 
     public void Logout(WebDriver driver) throws InterruptedException {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class=\"username\"]")));
         Thread.sleep(1000);

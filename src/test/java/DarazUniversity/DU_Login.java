@@ -120,13 +120,12 @@ public class DU_Login extends ExcelData  {
         Allure.step("Login Successfully");
         System.out.println("");
         //Thread.sleep(2000);
-
     }
 
     static String decodedusername( String username)
     {
-        byte[] decodedpassword = Base64.getDecoder().decode(username);
-        return (new String(decodedpassword));
+        byte[] decodedusername = Base64.getDecoder().decode(username);
+        return (new String(decodedusername));
     }
 
     static String decodedpassword( String password)
@@ -137,7 +136,7 @@ public class DU_Login extends ExcelData  {
 
     public void Login2 (WebDriver driver) throws InterruptedException {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         /*
         Thread.sleep(1500);
@@ -152,8 +151,8 @@ public class DU_Login extends ExcelData  {
         switch (Venture) {
             case "PK":
 
-                driver.get("https://sellercenter.daraz.pk/v2/seller/login?redirect_url=https%3A%2F%2Funiversity.daraz.pk%2FpersonalRecommend\n");
-
+              //  driver.get("https://sellercenter.daraz.pk/v2/seller/login?redirect_url=https%3A%2F%2Funiversity.daraz.pk%2FpersonalRecommend\n");
+                  driver.get("https://sellercenter.daraz.pk/v2/seller/login?");
                 break;
 
             case "LK":
@@ -187,18 +186,47 @@ public class DU_Login extends ExcelData  {
  */
         Thread.sleep(1500);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@placeholder=\"Please enter\" and @type=\"text\"]")));
-        UserID.sendKeys(decodedusername("c3RyZXNzdGVzdDI3MkBzZ2xpdmV0ZXN0LmNvbQ=="));
+        UserID.sendKeys(decodedusername("ZHVhdXRvbWF0aW9uQG1haWxpbmF0b3IuY29t"));
         Allure.step("Entered the User Name in text field");
 
         Thread.sleep(1500);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@placeholder=\"Please enter\" and @type=\"password\"]")));
-        Password.sendKeys(decodedpassword("bHpkQDEyMzQ="));
+        Password.sendKeys(decodedpassword("THpkQDEyMzQ="));
         Allure.step("Entered the Password in text field");
 
         Thread.sleep(1500);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topSideContent\"]/div/div[2]/div[2]/div")));
         LoginClick.click();
         Allure.step("Clicked on the Login button");
+
+        Thread.sleep(5000);
+
+        // Added Temporary due to redirection bug
+        switch (Venture) {
+            case "PK":
+
+                driver.get("https://university.daraz.pk/personalRecommend");
+
+                break;
+
+            case "LK":
+
+                driver.get("https://university.daraz.lk/personalRecommend");
+
+                break;
+
+            case "NP":
+
+                driver.get("https://university.daraz.com.np/personalRecommend");
+
+                break;
+
+            case "BD":
+
+                driver.get("https://university.daraz.com.bd/personalRecommend");
+
+                break;
+        }
 
         System.out.println("************************************");
         System.out.println("Daraz University Launched Successful");

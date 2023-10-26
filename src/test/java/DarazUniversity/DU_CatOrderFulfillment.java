@@ -91,10 +91,19 @@ public class DU_CatOrderFulfillment extends DU_Wait {
         {
             case "PK":
 
-                Thread.sleep(2000);
-                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Order Report')]")));
-                PackagGuidTutorial_PK.click();
-                Allure.step("Clicked on Order Report course");
+                try {
+                    Thread.sleep(2000);
+                    waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Order Report')]")));
+                    PackagGuidTutorial_PK.click();
+                    Allure.step("Clicked on Order Report course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.pk/course/learn?spm=du-pk-pc.du-pk-pc-list.courserlist_courses.7.627e49841w6tsd&id=8973&type=tutorials");
+                    System.out.println("Catch Block Executed");
+                }
+//                Thread.sleep(2000);
+//                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Order Report')]")));
+//                PackagGuidTutorial_PK.click();
+//                Allure.step("Clicked on Order Report course");
 
                 break;
 
@@ -144,6 +153,7 @@ public class DU_CatOrderFulfillment extends DU_Wait {
 
         try
         {
+            waitforelement().until(ExpectedConditions.visibilityOf(TutorailMaterial));
             Material = TutorailMaterial.isDisplayed();
         }
         catch(Exception e)

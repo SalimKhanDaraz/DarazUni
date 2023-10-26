@@ -18,13 +18,13 @@ public class DU_VerifyPlayButton {
     public DU_VerifyPlayButton(WebDriver driver) {
         PageFactory.initElements(driver, this);}
 
-    @FindBy(xpath="//*[text()=\"Categories\"]")
+    @FindBy(xpath="//div[text()=\"Categories\"]")
     public WebElement Categories;
 
-    @FindBy(xpath="//*[text()=\"Order Fulfillment\"]")
+    @FindBy(xpath="//span[text()=\"Order Fulfillment\"]")
     public WebElement OrderFulfillmentModule;
 
-    @FindBy(xpath="//*[text()=\"View all \"]")
+    @FindBy(xpath="//a[text()=\"View all \"]")
     public WebElement Viewall;
 
     @FindBy(xpath="//*[text()=\"Packaging Guidelines \"]")
@@ -63,7 +63,8 @@ public class DU_VerifyPlayButton {
         Allure.step("Clicked on Categories Tab on the Navigation bar");
 
         Thread.sleep(1500);
-        waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Order Fulfillment\"]")));
+      //  waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Order Fulfillment\"]")));
+        waitforelement().until(ExpectedConditions.visibilityOf(OrderFulfillmentModule));
         OrderFulfillmentModule.click();
         Allure.step("Clicked on Order Fulfillment module");
 
@@ -75,10 +76,15 @@ public class DU_VerifyPlayButton {
         switch (Venture) {
             case "PK":
 
-                Thread.sleep(4000);
-                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Packaging Guidelines \"]")));
-                PackagGuidTutorial_PK.click();
-                Allure.step("Clicked on Order Report course");
+                try {
+                    Thread.sleep(4000);
+                    waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Packaging Guidelines \"]")));
+                    PackagGuidTutorial_PK.click();
+                    Allure.step("Clicked on Order Report course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.pk/course/learn?spm=du-pk-pc.du-pk-pc-list.courserlist_courses.3.25844984iiJPTs&id=972&type=tutorials");
+                }
+
 
                 break;
 

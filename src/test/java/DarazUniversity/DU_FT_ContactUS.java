@@ -56,7 +56,7 @@ public class DU_FT_ContactUS {
 
     public void DU_SellerClaims (WebDriver driver) throws InterruptedException {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         // ArrayList<String> Tab = new ArrayList<String>(driver.getWindowHandles());
 

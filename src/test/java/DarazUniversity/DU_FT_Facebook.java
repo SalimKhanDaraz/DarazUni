@@ -28,7 +28,7 @@ public class DU_FT_Facebook {
 
         SoftAssert softAssert = new SoftAssert();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
 

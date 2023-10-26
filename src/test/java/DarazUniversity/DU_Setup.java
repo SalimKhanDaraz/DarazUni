@@ -47,7 +47,7 @@ public class DU_Setup {
             ChromeDriverService service = ChromeDriverService.createDefaultService();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--remote-allow-origins=*");
-         //   options.addArguments("--headless");
+            options.addArguments("--headless");
             options.setBinary("/usr/bin/google-chrome");
             options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             options.addArguments("disable-dev-shm-usage"); // recommended for running in Docker

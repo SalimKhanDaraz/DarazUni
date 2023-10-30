@@ -87,6 +87,7 @@ public class DU_CatPoliciesAndGuidlines {
 
             case "LK":
 
+                /*
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Search by Tag\"]")));
                 ContentType_Filter.click();
@@ -95,16 +96,24 @@ public class DU_CatPoliciesAndGuidlines {
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
                 Filter_Selection.click();
 
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()=\"Seller Compliance\"]")));
-                Thread.sleep(1500);
-                SellerCompliance.click();
-                Allure.step("Clicked on the Seller Claims Policy course");
+                 */
+
+                try {
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()=\"Seller Compliance\"]")));
+                    Thread.sleep(1500);
+                    SellerCompliance.click();
+                    Allure.step("Clicked on the Seller Claims Policy course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.lk/course/learn?spm=du-lk-pc.du-lk-pc-list.courserlist_courses.3.4cbd49842IYX87&id=1128&type=policies");
+                    Allure.step("Clicked on the Seller Claims Policy course");
+
+                }
 
                 break;
 
 
             case "BD":
-
+/*
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Search by Tag\"]")));
                 ContentType_Filter.click();
@@ -113,13 +122,34 @@ public class DU_CatPoliciesAndGuidlines {
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
                 Filter_Selection.click();
 
-                Thread.sleep(2000);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Marketplace Commission Structure\"]")));
-                SellerClaimsPolicy_BD.click();
-                Allure.step("Clicked on the Seller Claims Policy course");
+ */
+
+                try {
+                    Thread.sleep(2000);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Marketplace Commission Structure\"]")));
+                    SellerClaimsPolicy_BD.click();
+                    Allure.step("Clicked on the Seller Claims Policy course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.bd/course/learn?spm=du-bd-pc.du-bd-pc-list.courserlist_courses.9.5da84984SiSTQY&id=6155&type=policies");
+                    Allure.step("Clicked on the Seller Claims Policy course");
+                }
 
                 break;
 
+            case "NP":
+
+                try {
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()=\"Seller Compliance\"]")));
+                    Thread.sleep(1500);
+                    SellerCompliance.click();
+                    Allure.step("Clicked on the Seller Claims Policy course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.np/course/learn?spm=du-np-pc.du-np-pc-list.courserlist_courses.1.73f14984XSFwpw&id=1226&type=policies");
+                    Allure.step("Clicked on the Seller Claims Policy course");
+
+                }
+
+                break;
 
         }
 

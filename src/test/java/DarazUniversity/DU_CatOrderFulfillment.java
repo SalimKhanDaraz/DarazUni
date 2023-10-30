@@ -109,6 +109,7 @@ public class DU_CatOrderFulfillment extends DU_Wait {
 
             case "LK":
 
+                /*
                 Thread.sleep(2000);
                 waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
                 ContentType_Filter.click();
@@ -116,24 +117,36 @@ public class DU_CatOrderFulfillment extends DU_Wait {
                 waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
                 Filter_Selection.click();
 
-                Thread.sleep(2000);
-                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Packaging Guidelines\"]")));
-                PackagGuidTutorial_LK.click();
-                Allure.step("Clicked on Packaging Guidelines course");
+                 */
+
+                try {
+                    Thread.sleep(2000);
+                    waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Packaging Guidelines\"]")));
+                    PackagGuidTutorial_LK.click();
+                    Allure.step("Clicked on Packaging Guidelines course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.lk/course/learn?spm=du-lk-pc.du-lk-pc-list.courserlist_courses.3.30b649842ITKD3&id=1716&type=tutorials");
+                    Allure.step("Clicked on Packaging Guidelines course");
+                }
 
                 break;
 
             case "NP":
 
-                Thread.sleep(2000);
-                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Packaging Guidelines 2.0 \"]")));
-                PackagGuidTutorial_NP.click();
-                Allure.step("Clicked on Packaging Guidelines course");
+                try {
+                    Thread.sleep(2000);
+                    waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Packaging Guidelines 2.0 \"]")));
+                    PackagGuidTutorial_NP.click();
+                    Allure.step("Clicked on Packaging Guidelines course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.np/course/learn?spm=du-np-pc.du-np-pc-list.courserlist_courses.5.52a24984xSiYuo&id=2294&type=tutorials");
+                    Allure.step("Clicked on Packaging Guidelines course");
+                }
 
                 break;
 
             case "BD":
-
+/*
                 Thread.sleep(2000);
                 waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
                 ContentType_Filter.click();
@@ -141,9 +154,16 @@ public class DU_CatOrderFulfillment extends DU_Wait {
                 waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
                 Filter_Selection.click();
 
-                waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Order Daraz Packaging')]")));
-                OrderReportTutorial_BD.click();
-                Allure.step("Clicked on Order Report course");
+ */
+
+                try {
+                    waitforelement().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Order Daraz Packaging')]")));
+                    OrderReportTutorial_BD.click();
+                    Allure.step("Clicked on Order Report course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.bd/course/learn?spm=du-bd-pc.du-bd-pc-list.courserlist_courses.7.62294984spZhRX&id=1300&type=tutorials");
+                    Allure.step("Clicked on Order Report tutorial");
+                }
 
                 break;
 

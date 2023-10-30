@@ -49,6 +49,7 @@ public class DU_Setup {
             options.addArguments("--remote-allow-origins=*");
             options.addArguments("--headless");
             options.setBinary("/usr/bin/google-chrome");
+            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
             options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             options.addArguments("disable-dev-shm-usage"); // recommended for running in Docker
             options.addArguments("no-sandbox"); // recommended for running in Docker

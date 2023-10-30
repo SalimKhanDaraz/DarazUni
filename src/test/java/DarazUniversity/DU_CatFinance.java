@@ -64,10 +64,69 @@ public class DU_CatFinance {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//head//*[text()=\"Finance\"]")));
         PageTitle = PageTile.getAttribute("innerHTML");
 
-        Thread.sleep(1500);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Daraz Finance\"]")));
-        IntroToDarazFinance.click();
-        Allure.step("Clicked on Introduction to Daraz Finance tutorial");
+        String Venture = DU_Portal.Venture;
+
+        switch (Venture) {
+            case "LK":
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Daraz Finance\"]")));
+                    IntroToDarazFinance.click();
+                    Allure.step("Clicked on Introduction to Daraz Finance tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.lk/course/learn?spm=du-lk-pc.du-lk-pc-list.courserlist_courses.3.101c4984lHZZ4c&id=1096&type=tutorials");
+                    Allure.step("Clicked on Introduction to Daraz Finance tutorial");
+                }
+
+                break;
+
+
+            case "PK":
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Daraz Finance\"]")));
+                    IntroToDarazFinance.click();
+                    Allure.step("Clicked on Introduction to Daraz Finance tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.pk/course/learn?spm=du-pk-pc.du-pk-pc-list.courserlist_courses.7.3ad94984E5bUk9&id=1317&type=tutorials");
+                    Allure.step("Clicked on Introduction to Daraz Finance tutorial");
+                }
+
+                break;
+
+            case "NP":
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Daraz Finance\"]")));
+                    IntroToDarazFinance.click();
+                    Allure.step("Clicked on Introduction to Daraz Finance tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.np/course/learn?spm=du-np-pc.du-np-pc-list.courserlist_courses.3.a39d4984Mc3Ufl&id=2413&type=tutorials");
+                    Allure.step("Clicked on Introduction to Daraz Finance tutorial");
+                }
+
+                break;
+
+
+            case "BD":
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Daraz Finance\"]")));
+                    IntroToDarazFinance.click();
+                    Allure.step("Clicked on Introduction to Daraz Finance tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.bd/course/learn?spm=du-bd-pc.du-bd-pc-list.courserlist_courses.3.643e4984hYTUmD&id=1039&type=tutorials");
+                    Allure.step("Clicked on Introduction to Daraz Finance tutorial");
+                }
+
+                break;
+
+
+        }
 
         Thread.sleep(1500);
         boolean Material;

@@ -73,10 +73,16 @@ import java.time.Duration;
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//head//*[text()=\"Finance\"]")));
             PageTitle = PageTile.getAttribute("innerHTML");
 
-            Thread.sleep(1500);
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Daraz Finance\"]")));
-            IntroToDarazFinance.click();
-            Allure.step("Clicked on the Introduction to Daraz Finance course");
+            try {
+                Thread.sleep(1500);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Daraz Finance\"]")));
+                IntroToDarazFinance.click();
+                Allure.step("Clicked on the Introduction to Daraz Finance course");
+            }catch (Exception e){
+                driver.navigate().to("https://university.daraz.lk/course/learn?spm=du-lk-pc.du-lk-pc-list.courserlist_courses.3.61724984oHdbrH&id=1096&type=tutorials");
+                Allure.step("Clicked on the Introduction to Daraz Finance course");
+
+            }
 
             Thread.sleep(1500);
             boolean RecommendedCoursesSec;

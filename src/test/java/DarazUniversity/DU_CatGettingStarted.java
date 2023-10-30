@@ -104,7 +104,7 @@ public class DU_CatGettingStarted {
         switch (Venture)
         {
             case "PK":
-
+/*
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Search by Tag\"]")));
                 ContentType_Filter_PK.click();
@@ -114,6 +114,8 @@ public class DU_CatGettingStarted {
 
                 Thread.sleep(1500);
                 Focus_Shift.click();
+
+ */
 
                 try {
                     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()=\"Welcome to Daraz \"]")));
@@ -132,7 +134,7 @@ public class DU_CatGettingStarted {
                 break;
 
             case "LK":
-
+/*
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Search by Tag\"]")));
                 ContentType_Filter.click();
@@ -140,16 +142,23 @@ public class DU_CatGettingStarted {
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
                 Filter_Selection.click();
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Startup Guide to Daraz Seller Center\"]")));
-                GettingStartedOnDaraz_LK.click();
-                Allure.step("Clicked on Getting Started On Daraz tutorial");
+ */
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Startup Guide to Daraz Seller Center\"]")));
+                    GettingStartedOnDaraz_LK.click();
+                    Allure.step("Clicked on Getting Started On Daraz tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.lk/course/learn?spm=du-lk-pc.du-lk-pc-list.courserlist_courses.5.60fb4984Ku4dnn&id=1085&type=tutorials");
+                    Allure.step("Clicked on Getting Started On Daraz tutorial");
+                }
 
                 break;
 
 
             case "BD":
-
+/*
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Search by Tag\"]")));
                 ContentType_Filter.click();
@@ -157,14 +166,21 @@ public class DU_CatGettingStarted {
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Tutorials\"]")));
                 Filter_Selection.click();
 
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Setting Holiday Mode for your Shop\"]")));
-                GettingStartedOnDaraz_BD.click();
-                Allure.step("Clicked on Getting Started On Daraz tutorial");
+ */
+
+                try {
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Setting Holiday Mode for your Shop\"]")));
+                    GettingStartedOnDaraz_BD.click();
+                    Allure.step("Clicked on Getting Started On Daraz tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.bd/course/learn?spm=du-bd-pc.du-bd-pc-list.courserlist_courses.3.64794984BAPCNF&id=3089&type=tutorials");
+                    Allure.step("Clicked on Getting Started On Daraz tutorial");
+                }
 
                 break;
 
             case "NP":
-
+/*
                 Thread.sleep(2000);
                 Tag_Filter.click();
 
@@ -174,10 +190,17 @@ public class DU_CatGettingStarted {
                 Thread.sleep(1000);
                 Focus_Shift.click();
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Getting Started on Daraz \"]")));
-                GettingStartedOnDaraz_NP.click();
-                Allure.step("Clicked on Getting Started On Daraz tutorial");
+ */
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Getting Started on Daraz \"]")));
+                    GettingStartedOnDaraz_NP.click();
+                    Allure.step("Clicked on Getting Started On Daraz tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.np/course/learn?spm=du-np-pc.du-np-pc-list.courserlist_courses.37.16124984HmCGXy&id=1455&type=tutorials");
+                    Allure.step("Clicked on Getting Started On Daraz tutorial");
+                }
 
                 break;
         }

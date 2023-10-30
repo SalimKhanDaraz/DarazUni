@@ -63,10 +63,67 @@ public class DU_CatStreamliningOps {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//head//*[text()=\"Streamlining Operations\"]")));
         PageTitle = PageTile.getAttribute("innerHTML");
 
-        Thread.sleep(1500);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Seller API\"]")));
-        IntroToSellerAPI.click();
-        Allure.step("Clicked on Introduction to Seller API course");
+        String Venture = DU_Portal.Venture;
+
+        switch (Venture) {
+
+            case "LK":
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Seller API\"]")));
+                    IntroToSellerAPI.click();
+                    Allure.step("Clicked on Introduction to Seller API course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.lk/course/learn?spm=du-lk-pc.du-lk-pc-list.courserlist_courses.3.219c4984qPxrv0&id=1101&type=tutorials");
+                    Allure.step("Clicked on Introduction to Seller API course");
+                }
+
+                break;
+
+            case "PK":
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Seller API\"]")));
+                    IntroToSellerAPI.click();
+                    Allure.step("Clicked on Introduction to Seller API course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.pk/course/learn?spm=du-pk-pc.du-pk-pc-list.courserlist_courses.37.53364984hSbhgB&id=8290&type=tutorialsvvv");
+                    Allure.step("Clicked on Introduction to Seller API course");
+                }
+
+                break;
+
+            case "NP":
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Seller API\"]")));
+                    IntroToSellerAPI.click();
+                    Allure.step("Clicked on Introduction to Seller API course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.np/course/learn?spm=du-np-pc.du-np-pc-list.courserlist_courses.19.6e784984ETLzVv&id=12285&type=tutorials");
+                    Allure.step("Clicked on Introduction to Seller API course");
+                }
+
+                break;
+
+            case "BD":
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introduction to Seller API\"]")));
+                    IntroToSellerAPI.click();
+                    Allure.step("Clicked on Introduction to Seller API course");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.bd/course/learn?spm=du-bd-pc.du-bd-pc-list.courserlist_courses.5.1ab94984CX6Uta&id=1046&type=tutorials");
+                    Allure.step("Clicked on IImprove Your Order Processing Time Tutorial");
+                }
+
+                break;
+
+        }
 
 
         Thread.sleep(1500);

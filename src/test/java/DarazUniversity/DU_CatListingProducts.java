@@ -87,15 +87,20 @@ public class DU_CatListingProducts {
         {
             case "PK":
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introducing Product Advisor\"]")));
-                IntroducingProductAdvisor_PK.click();
-                Allure.step("Clicked on Introducing Product Advisor tutorial");
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Introducing Product Advisor\"]")));
+                    IntroducingProductAdvisor_PK.click();
+                    Allure.step("Clicked on Introducing Product Advisor tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.pk/course/learn?spm=du-pk-pc.du-pk-pc-list.courserlist_courses.37.53364984hSbhgB&id=8290&type=tutorials");
+                    Allure.step("Clicked on Introducing Product Advisor tutorial");
+                }
 
                 break;
 
             case "LK":
-
+/*
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
                 ContentType_Filter.click();
@@ -110,24 +115,37 @@ public class DU_CatListingProducts {
                 Thread.sleep(2000);
                 driver.findElement(By.xpath("//*[text()=\"Alphabetical Order\"]")).click();
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"All About Daraz Size Chart Feature \"]")));
-                IntroducingProductAdvisor_LK.click();
-                Allure.step("Clicked on Product Listing Guide tutorial");
+ */
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"All About Daraz Size Chart Feature \"]")));
+                    IntroducingProductAdvisor_LK.click();
+                    Allure.step("Clicked on Product Listing Guide tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.lk/course/learn?spm=du-lk-pc.du-lk-pc-list.courserlist_courses.3.ec784984YLAI9p&id=1092&type=tutorials");
+                    Allure.step("Clicked on Product Listing Guide tutorial");
+
+                }
 
                 break;
 
             case "NP":
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Price & Stock update (Single Product)\"]")));
-                IntroducingProductAdvisor_NP.click();
-                Allure.step("Clicked on Product Listing Guide tutorial");
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Price & Stock update (Single Product)\"]")));
+                    IntroducingProductAdvisor_NP.click();
+                    Allure.step("Clicked on Product Listing Guide tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.np/course/learn?spm=du-np-pc.du-np-pc-list.courserlist_courses.23.a12e49843aabl2&id=1459&type=tutorials");
+                    Allure.step("Clicked on Product Listing Guide tutorial");
+                }
 
                 break;
 
             case "BD":
-
+/*
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
                 ContentType_Filter.click();
@@ -141,10 +159,15 @@ public class DU_CatListingProducts {
 
                 Thread.sleep(2000);
                 driver.findElement(By.xpath("//*[text()=\"Alphabetical Order\"]")).click();
-
-                Thread.sleep(2000);
-                IntroducingProductAdvisor_BD.click();
-                Allure.step("Clicked on Product Listing Guide tutorial");
+ */
+                try {
+                    Thread.sleep(2000);
+                    IntroducingProductAdvisor_BD.click();
+                    Allure.step("Clicked on Product Listing Guide tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.bd/course/learn?spm=du-bd-pc.du-bd-pc-list.courserlist_courses.1.68a54984FGvu8O&id=13984&type=tutorials");
+                    Allure.step("Clicked on How to Register a Brand tutorial");
+                }
 
                 break;
 

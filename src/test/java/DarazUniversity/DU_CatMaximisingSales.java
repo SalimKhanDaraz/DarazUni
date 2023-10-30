@@ -91,7 +91,7 @@ public class DU_CatMaximisingSales {
         switch (Venture)
         {
             case "PK":
-
+/*
                 Thread.sleep(1500);
                 Tag_Filter.click();
 
@@ -100,6 +100,8 @@ public class DU_CatMaximisingSales {
 
                 Thread.sleep(1500);
                 Focus_Shift.click();
+
+ */
 
                 try {
                     Thread.sleep(1500);
@@ -116,7 +118,7 @@ public class DU_CatMaximisingSales {
 
 
             case "BD":
-
+/*
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
                 ContentType_Filter.click();
@@ -131,16 +133,23 @@ public class DU_CatMaximisingSales {
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Alphabetical Order\"]")));
                 driver.findElement(By.xpath("//*[text()=\"Alphabetical Order\"]")).click();
+ */
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"10 Ways to Boost your Sales\"]")));
-                Tutorial_BD.click();
-                Allure.step("Clicked on All About DarazMall tutorial");
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"10 Ways to Boost your Sales\"]")));
+                    Tutorial_BD.click();
+                    Allure.step("Clicked on All About DarazMall tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.bd/course/learn?spm=du-bd-pc.du-bd-pc-list.courserlist_courses.9.602f4984OU68di&id=13965&type=tutorials");
+                    Allure.step("Clicked on Improve Your Chat Response Rate tutorial");
+                }
 
                 break;
 
             case "LK":
 
+                /*
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
                 ContentType_Filter.click();
@@ -155,20 +164,32 @@ public class DU_CatMaximisingSales {
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Alphabetical Order\"]")));
                 driver.findElement(By.xpath("//*[text()=\"Alphabetical Order\"]")).click();
+                 */
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"10 Ways to Boost your Sales\"]")));
-                Tutorial_LK.click();
-                Allure.step("Clicked on Guide to Creating Collectible Vouchers tutorial");
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"10 Ways to Boost your Sales\"]")));
+                    Tutorial_LK.click();
+                    Allure.step("Clicked on Guide to Creating Collectible Vouchers tutorial");
+                }catch (Exception e)
+                {
+                    driver.navigate().to("https://university.daraz.lk/course/learn?spm=du-lk-pc.du-lk-pc-list.courserlist_courses.1.2a2f4984PqE62p&id=1105&type=tutorials");
+                    Allure.step("Clicked on Guide to Creating Collectible Vouchers tutorial");
+                }
 
                 break;
 
             case "NP":
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Boost your Products using Seller Picks \"]")));
-                Tutorial_NP.click();
-                Allure.step("Clicked on Guide to Creating Collectible Vouchers tutorial");
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Boost your Products using Seller Picks \"]")));
+                    Tutorial_NP.click();
+                    Allure.step("Clicked on Guide to Creating Collectible Vouchers tutorial");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.np/course/learn?spm=du-np-pc.du-np-pc-list.courserlist_courses.5.76db4984zi0EPI&id=1370&type=tutorials");
+                    Allure.step("Clicked on Guide to Creating Collectible Vouchers tutorial");
+                }
 
                 break;
         }

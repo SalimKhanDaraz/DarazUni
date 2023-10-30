@@ -28,7 +28,7 @@ public class DU_Portal {
 
     XSSFSheet sheet;
 
-    //public static String Venture = "BD";
+    //public static String Venture = "NP";
 
     public static String Venture = System.getenv("Venture_Jenkins");
 

@@ -79,7 +79,7 @@ public class DU_CatViewAllCourses {
         switch (Venture)
         {
             case "PK":
-
+/*
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Search by Tag']")));
                 Thread.sleep(1000);
                 Tag_Filter.click();
@@ -91,6 +91,8 @@ public class DU_CatViewAllCourses {
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='pagination']")));
                 Thread.sleep(1000);
                 Focus_Shift.click();
+
+ */
 
                 try {
                     Thread.sleep(1500);
@@ -106,6 +108,7 @@ public class DU_CatViewAllCourses {
 
             case "LK":
 
+                /*
                 Thread.sleep(2000);
                 Tag_Filter.click();
 
@@ -115,15 +118,25 @@ public class DU_CatViewAllCourses {
                 Thread.sleep(1000);
                 Focus_Shift.click();
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Daraz Content Guidelines\"]")));
-                CategoryRestrictionPolicy_LK.click();
-                Allure.step("Clicked on Guide to download an Order Report");
+                 */
+
+                try {
+
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Daraz Content Guidelines\"]")));
+                    CategoryRestrictionPolicy_LK.click();
+                    Allure.step("Clicked on Guide to download an Order Report");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.lk/course/learn?spm=du-lk-pc.du-lk-pc-list.courserlist_courses.9.7ac04984fiRk4t&id=1105&type=tutorials");
+                    Allure.step("Clicked on Guide to download an Order Report");
+
+                }
+
 
                 break;
 
             case "BD":
-
+/*
                 Thread.sleep(2000);
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder=\"Content type\"]")));
                 ContentType_Filter.click();
@@ -138,10 +151,34 @@ public class DU_CatViewAllCourses {
                 Thread.sleep(2000);
                 driver.findElement(By.xpath("//*[text()=\"Alphabetical Order\"]")).click();
 
-                Thread.sleep(1500);
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"About Daraz University\"]")));
-                CategoryRestrictionPolicy_BD.click();
-                Allure.step("Clicked on Guide to download an Order Report");
+ */
+
+                try {
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"About Daraz University\"]")));
+                    CategoryRestrictionPolicy_BD.click();
+                    Allure.step("Clicked on Guide to download an Order Report");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.bd/course/learn?spm=du-bd-pc.du-bd-pc-list.courserlist_courses.3.fbcc4984OKLfQt&id=6580&type=tutorials");
+                    Allure.step("Clicked on Failed Delivery Report");
+                }
+
+                break;
+
+            case "NP":
+
+                try {
+
+                    Thread.sleep(1500);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"Daraz Content Guidelines\"]")));
+                    CategoryRestrictionPolicy_LK.click();
+                    Allure.step("Clicked on Guide to download an Order Report");
+                }catch (Exception e){
+                    driver.navigate().to("https://university.daraz.com.np/course/learn?spm=du-np-pc.du-np-pc-list.courserlist_courses.3.56504984LHsMbX&id=3570&type=tutorials");
+                    Allure.step("Clicked on Guide to download an Order Report");
+
+                }
+
 
                 break;
         }

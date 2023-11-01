@@ -22,7 +22,7 @@ public class DU_Logout extends DU_Wait{
     @FindBy(xpath="//*[@class=\"username\"]")
     public WebElement username;
 
-    @FindBy(xpath="//*[@id=\"root\"]/div/div[1]/header/div/div[2]/img[2]")
+    @FindBy(xpath="//*[text()=\"Logout\"]")
     public WebElement Logoutbutton;
 
 
@@ -38,7 +38,7 @@ public class DU_Logout extends DU_Wait{
         Allure.step("Clicked on the Dropdown button");
 
         Thread.sleep(1000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div[1]/header/div/div[2]/img[2]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()=\"Logout\"]")));
         Logoutbutton.click();
         Allure.step("Clicked on the Logout button");
 

@@ -275,7 +275,7 @@ public class RegressionSuite_PK {
         DGA.GrowthAssistant(driver);
     }
 
-
+/*
     @Test (priority = 25,retryAnalyzer = DU_AutoRetry.class, enabled = false)
     @Description ("Verifying the Daraz Advertising Sub Module under the Growth Assistant Module")
     public void DU_DarazAdvertising() throws InterruptedException
@@ -307,6 +307,8 @@ public class RegressionSuite_PK {
 
 
     }
+
+ */
 
 
     @Test (priority = 24,retryAnalyzer = DU_AutoRetry.class)
@@ -366,7 +368,7 @@ public class RegressionSuite_PK {
         DSSCU.DU_ContactUs(driver);
     }
 
-
+/*
     @Test (priority = 29,retryAnalyzer = DU_AutoRetry.class, enabled = false)
     @Description ("Verifying Seller Claims Module")
     public void DU_SS_SellerClaims() throws InterruptedException
@@ -398,6 +400,8 @@ public class RegressionSuite_PK {
 
 
     }
+
+ */
 
     @Test (priority = 30,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying About Us Module")

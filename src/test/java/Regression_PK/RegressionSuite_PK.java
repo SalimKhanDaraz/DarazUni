@@ -275,7 +275,7 @@ public class RegressionSuite_PK {
     }
 
 /*
-    @Test (priority = 25,retryAnalyzer = DU_AutoRetry.class, enabled = false)
+    @Test (priority = 25,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Daraz Advertising Sub Module under the Growth Assistant Module")
     public void DU_DarazAdvertising() throws InterruptedException
     {
@@ -299,6 +299,12 @@ public class RegressionSuite_PK {
             case "BD":
 
                 System.out.println("Daraz Advertising Module is not available in BD Venture");
+
+                break;
+
+            case "NP":
+
+                System.out.println("Daraz Advertising Module is not available in NP Venture");
 
                 break;
 
@@ -338,7 +344,6 @@ public class RegressionSuite_PK {
 
         }
     }
-
 
 
     @Test (priority = 26,retryAnalyzer = DU_AutoRetry.class)
@@ -392,6 +397,12 @@ public class RegressionSuite_PK {
             case "BD":
 
                 System.out.println("This Module is not available in BD Venture");
+
+                break;
+
+           case "NP":
+
+                System.out.println("This Module is not available in NP Venture");
 
                 break;
 

@@ -45,17 +45,7 @@ public class RegressionSuite_PK {
         DTD.browserclose(driver);
     }
 
-    /*
-    @AfterTest()
-    public void TakeScreenshot() throws IOException {
 
-            File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            File dest = new File(System.getProperty("user.dir")+ "/Images/" + LocalTime.now() + ".jpg");
-            FileUtils.copyFile(screenshot,dest);
-            Allure.addAttachment("FailureTestCase",new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
-        }
-
-     */
 
     /*
         @Test (priority = 1)
@@ -277,46 +267,7 @@ public class RegressionSuite_PK {
         DGA.GrowthAssistant(driver);
     }
 
-/*
-    @Test (priority = 25,retryAnalyzer = DU_AutoRetry.class)
-    @Description ("Verifying the Daraz Advertising Sub Module under the Growth Assistant Module")
-    public void DU_DarazAdvertising() throws InterruptedException
-    {
-        String Venture = DU_Portal.Venture;
 
-        switch (Venture)
-        {
-            case "PK":
-
-                DU_GA_DarazAdvertising DAS = new DU_GA_DarazAdvertising (driver);
-                DAS.DarazAdvertisingSol(driver);
-
-                break;
-
-            case "LK":
-
-                System.out.println("Daraz Advertising Module is not available in LK Venture");
-
-                break;
-
-            case "BD":
-
-                System.out.println("Daraz Advertising Module is not available in BD Venture");
-
-                break;
-
-            case "NP":
-
-                System.out.println("Daraz Advertising Module is not available in NP Venture");
-
-                break;
-
-        }
-
-
-    }
-
- */
 
 
     @Test (priority = 24,retryAnalyzer = DU_AutoRetry.class)
@@ -375,46 +326,6 @@ public class RegressionSuite_PK {
         DSSCU.DU_ContactUs(driver);
     }
 
-/*
-    @Test (priority = 29,retryAnalyzer = DU_AutoRetry.class, enabled = false)
-    @Description ("Verifying Seller Claims Module")
-    public void DU_SS_SellerClaims() throws InterruptedException
-    {
-        DU_SS_SellerClaims  DSSSC = new DU_SS_SellerClaims(driver);
-        String Venture = DU_Portal.Venture;
-
-        switch (Venture)
-        {
-            case "PK":
-
-                DSSSC.DU_SellerClaims(driver);
-
-                break;
-
-            case "LK":
-
-                DSSSC.DU_SellerClaims(driver);
-
-                break;
-
-            case "BD":
-
-                System.out.println("This Module is not available in BD Venture");
-
-                break;
-
-           case "NP":
-
-                System.out.println("This Module is not available in NP Venture");
-
-                break;
-
-        }
-
-
-    }
-
- */
 
     @Test (priority = 30,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying About Us Module")

@@ -266,7 +266,6 @@ public class RegressionSuite_PK {
         DEC.Event_Calendar(driver);
     }
 
-
     @Test (priority = 23,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the Growth Assistant Module in the Navigation Bar")
     public void DU_GrowthAssistant() throws InterruptedException

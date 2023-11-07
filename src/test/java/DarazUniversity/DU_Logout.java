@@ -40,6 +40,8 @@ public class DU_Logout extends DU_Wait{
         Thread.sleep(1000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()=\"Logout\"]")));
         Logoutbutton.click();
+        Thread.sleep(8000);
+
         Allure.step("Clicked on the Logout button");
 
         System.out.println("********************");

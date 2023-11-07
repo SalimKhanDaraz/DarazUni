@@ -45,6 +45,7 @@ public class RegressionSuite_PK {
         DTD.browserclose(driver);
     }
 
+    /*
     @AfterTest()
     public void TakeScreenshot() throws IOException {
 
@@ -53,6 +54,8 @@ public class RegressionSuite_PK {
             FileUtils.copyFile(screenshot,dest);
             Allure.addAttachment("FailureTestCase",new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
         }
+
+     */
 
     /*
         @Test (priority = 1)

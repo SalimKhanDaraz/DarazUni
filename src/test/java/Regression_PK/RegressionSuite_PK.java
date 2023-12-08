@@ -95,6 +95,7 @@ public class RegressionSuite_PK {
         DL.Login2(driver);
     }
 
+
     @Test (priority = 3,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Scrolling from Footer to Header")
     public void DU_HPScroll () throws InterruptedException
@@ -450,6 +451,48 @@ public class RegressionSuite_PK {
  */
 
     @Test (priority = 41,retryAnalyzer = DU_AutoRetry.class)
+    @Description ("Verifying Course Detail Page functionality")
+    public void CourseDetail_Page() throws InterruptedException
+    {
+        DU_CourseDetailsPage CDP = new DU_CourseDetailsPage(driver);
+        CDP.CourseDetailsPage(driver);
+    }
+
+
+    @Test (priority = 42,retryAnalyzer = DU_AutoRetry.class)
+    @Description ("Verifying Course Detail Page functionality")
+    public void CourseStatistics() throws InterruptedException
+    {
+        DU_CourseDetailsPage CDP = new DU_CourseDetailsPage(driver);
+        CDP.CourseStatistics(driver);
+    }
+
+
+    @Test (priority = 43,retryAnalyzer = DU_AutoRetry.class)
+    @Description ("Verifying Course Detail Page functionality")
+    public void CourseDetail_ReviewSection() throws InterruptedException
+    {
+        DU_CourseDetailsPage CDP = new DU_CourseDetailsPage(driver);
+        CDP.CourseReviewSection(driver);
+    }
+
+    @Test (priority = 44,retryAnalyzer = DU_AutoRetry.class)
+    @Description ("Verifying Course Detail Page functionality")
+    public void CourseDetailListPage() throws InterruptedException
+    {
+        DU_CourseDetailsListPage CDLP = new DU_CourseDetailsListPage(driver);
+        CDLP.ModuleListPage(driver);
+    }
+
+    @Test (priority = 45,retryAnalyzer = DU_AutoRetry.class)
+    @Description ("Verifying Course Detail Page functionality")
+    public void ActionDetailsPage() throws InterruptedException
+    {
+        DU_CourseActionPage CAP = new DU_CourseActionPage(driver);
+        CAP.ActionPage(driver);
+    }
+
+    @Test (priority = 46,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the logout functionality")
     public void DU_Logout() throws InterruptedException
     {

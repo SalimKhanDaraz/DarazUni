@@ -450,6 +450,7 @@ public class RegressionSuite_PK {
 
  */
 
+
     @Test (priority = 41,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying Course Detail Page functionality")
     public void CourseDetail_Page() throws InterruptedException

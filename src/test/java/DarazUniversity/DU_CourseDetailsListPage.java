@@ -81,7 +81,7 @@ public class DU_CourseDetailsListPage {
             softAssert.assertFalse(true,"Course Details List Page Failed");
         }
 
-        ActionPage_Button.click();
+      //  ActionPage_Button.click();
 
         softAssert.assertAll();
 

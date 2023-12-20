@@ -53,7 +53,6 @@ public class DU_EventCalendar {
             EventCalendarTab.click();
             Allure.step("Clicked on Event Calendar Tab on the Navigation bar");
 
-
             Thread.sleep(1000);
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[title]//*[text()=\"Training Calendar\"]")));
             WebElement PageTile = driver.findElement(By.xpath("//*[title]//*[text()=\"Training Calendar\"]"));
@@ -108,7 +107,6 @@ public class DU_EventCalendar {
                 WebElement RegSuccessMsg = driver.findElement(By.xpath("/html/body/div[3]/div/div"));
                 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[3]/div/div")));
                 EventRegMsg = RegSuccessMsg.getAttribute("innerHTML");
-
 
                 Thread.sleep(3000);
 

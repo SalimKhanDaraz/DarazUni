@@ -40,6 +40,15 @@ public class DU_Setup {
             options.addArguments("--headless","--remote-allow-origins=*");
             driver = new ChromeDriver(service, options);
         }
+        else if (os.equalsIgnoreCase("windows 10")) {
+            WebDriverManager.chromedriver().setup();
+            ChromeDriverService service = ChromeDriverService.createDefaultService();
+            ChromeOptions options = new ChromeOptions();
+            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+            options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+            options.addArguments("--headless","--remote-allow-origins=*");
+            driver = new ChromeDriver(service, options);
+        }
         else {
 
             Runtime.getRuntime().exec("sudo apt-get install xvfb");

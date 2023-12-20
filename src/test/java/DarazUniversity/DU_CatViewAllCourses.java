@@ -24,7 +24,7 @@ public class DU_CatViewAllCourses {
     @FindBy(xpath="//*[text()=\"Categories\"]")
     public WebElement Categories;
 
-    @FindBy(xpath="//*[text()=\"View all courses\"]")
+    @FindBy(xpath="//*[text()=\"View all content\"]")
     public WebElement ViewallCourses;
 
     @FindBy(xpath="//*[text()=\"List of Prohibited Items\"]")
@@ -70,7 +70,7 @@ public class DU_CatViewAllCourses {
 
 
         Thread.sleep(1500);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"View all courses\"]")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()=\"View all content\"]")));
         ViewallCourses.click();
         Allure.step("Clicked on View All Courses module");
 

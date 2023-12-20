@@ -24,12 +24,18 @@ public class DU_CourseActionPage {
     @FindBy(xpath="//div[@class=\"dada-main-page\"]")
     public WebElement ActionDetailsPage;
 
+    @FindBy(xpath="//span[@class=\"action-type\"]")
+    public WebElement ActionPage_Button;
+
     public void ActionPage (WebDriver driver) throws InterruptedException {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         SoftAssert softAssert = new SoftAssert();
 
+        wait.until(ExpectedConditions.visibilityOf(ActionPage_Button)).isDisplayed();
+        ActionPage_Button.click();
+        /*
         Set<String> handles = driver.getWindowHandles();
         String currentHandle = driver.getWindowHandle();
 
@@ -43,7 +49,7 @@ public class DU_CourseActionPage {
         }
 
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
-
+         */
 
         boolean ActionPage;
 
@@ -78,10 +84,12 @@ public class DU_CourseActionPage {
             softAssert.assertFalse(true,"Action Page Details Failed");
         }
 
-        driver.close();
+        //driver.close();
         softAssert.assertAll();
 
-        driver.switchTo().window(tabs.get(0));
+        //driver.switchTo().window(tabs.get(0));
+
+        driver.navigate().back();
     }
 
 }

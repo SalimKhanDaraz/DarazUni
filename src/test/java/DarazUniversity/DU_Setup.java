@@ -32,7 +32,8 @@ public class DU_Setup {
 
         System.out.println("\n\nCurrent OS is: "+os+"\n\n");
         if(os.equalsIgnoreCase("mac os x")){
-            WebDriverManager.chromedriver().setup();
+           // WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().clearDriverCache().setup();
             ChromeDriverService service = ChromeDriverService.createDefaultService();
             ChromeOptions options = new ChromeOptions();
             options.setPageLoadStrategy(PageLoadStrategy.EAGER);
@@ -41,7 +42,8 @@ public class DU_Setup {
             driver = new ChromeDriver(service, options);
         }
         else if (os.equalsIgnoreCase("windows 10")) {
-            WebDriverManager.chromedriver().setup();
+          //  WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().clearDriverCache().setup();
             ChromeDriverService service = ChromeDriverService.createDefaultService();
             ChromeOptions options = new ChromeOptions();
             options.setPageLoadStrategy(PageLoadStrategy.EAGER);

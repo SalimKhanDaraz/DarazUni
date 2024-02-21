@@ -25,9 +25,6 @@ public class RegressionSuite_PK {
     DU_Setup DB = new DU_Setup(driver);
     DU_Teardown DTD = new DU_Teardown(driver);
 
-    // Testing
-
-
 /*
     public RegressionSuite_PK() throws IOException {
     }
@@ -75,6 +72,7 @@ public class RegressionSuite_PK {
 
 
     /*
+    =================================
     Login with credentials from sheet
     @Test (priority = 2)
     @Description ("Verifying Login Functionality")
@@ -85,6 +83,7 @@ public class RegressionSuite_PK {
         String Password = DL.getcelldata2();
         DL.Login(driver,UserID,Password);
     }
+    ==================================
      */
 
     @Test (priority = 2,retryAnalyzer = DU_AutoRetry.class)
@@ -266,9 +265,7 @@ public class RegressionSuite_PK {
     {
         DU_GA_SellersAcheivement DGA = new DU_GA_SellersAcheivement(driver);
         DGA.GrowthAssistant(driver);
-    }
-
-
+    } 
 
 
     @Test (priority = 24,retryAnalyzer = DU_AutoRetry.class)
@@ -440,15 +437,17 @@ public class RegressionSuite_PK {
         DUPB.OrderFulfill(driver);
     }
 
-/*    // not in use
+
+/*    // ======== not in use =========
     @Test (priority = 40,enabled = false)
     public void DU_OrderFulfillment() throws InterruptedException
     {
         DU_OrderFulfillment DUOF = new DU_OrderFulfillment(driver);
         DUOF.OrderFulfill(driver);
     }
-
+    // ======== not in use ===========
  */
+
 
 
     @Test (priority = 41,retryAnalyzer = DU_AutoRetry.class)
@@ -493,7 +492,16 @@ public class RegressionSuite_PK {
         CAP.ActionPage(driver);
     }
 
-    @Test (priority = 46,retryAnalyzer = DU_AutoRetry.class)
+
+    @Test (priority = 46)
+    @Description("Verifying Course Detail Page functionality When Course is already Started")
+    public void CourseDetailsWhenCourseIsStarted()
+    {
+        DU_CourseDetailsPage CDWCS = new DU_CourseDetailsPage(driver);
+        CDWCS.CourseDetailsWhenCourseStarted(driver);
+    }
+
+    @Test (priority = 47,retryAnalyzer = DU_AutoRetry.class)
     @Description ("Verifying the logout functionality")
     public void DU_Logout() throws InterruptedException
     {
@@ -502,7 +510,7 @@ public class RegressionSuite_PK {
     }
 
     //End
-    //====================================================================================================================================\\
+    //========================================================================================================\\
 }
 
 
